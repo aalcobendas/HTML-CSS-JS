@@ -1,0 +1,189 @@
+html {
+  height:100vw;
+	width:100vw;
+	background-color:#F6F6F6;
+  overflow-y: scroll;
+}
+/*El cuerpo de la estructura ocupará un poco menos que el total de la página*/
+body {
+  height:100vw;
+	width:100vw;
+	margin:0%;
+}
+/*Para poder acceder a un tipo de letra externo se exporta al stylesheet un nuevo
+tipo de fuente proveniente de un link de google, a esa nueva tipografía se la denominará PT Sans,
+el nombre que se le da, "ptSans", será el nombre al que se accederá en los distintos textos*/
+.ptSans{
+	font-family: 'PT Sans', sans-serif;
+}
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+.ppal{
+  cursor: pointer;
+}
+/*El header tendrá un margen con respecto a la página total,
+este actuará como bloque, y se repartirán los elementos que haya en el de forma ordenada. El
+texto se alineará al centro*/
+header {
+	overflow:hidden;
+  display: block;
+  margin:0%;
+  padding:0%;
+  border:0%;
+}
+/*El porcentaje de ocupación de la imagen dentro del espacio reservado para ella*/
+#img-titulo img {
+	width:7vw;
+  margin:0%;
+  padding:0%;
+  border:0%;
+}
+/*Las características del espacio reservado para la imagen del logo, que será de un ancho de 17%,
+teniendo márgen y estando a la derecha de la página*/
+#img-titulo{
+	width: 7vw;
+  padding:0%;
+  border:0%;
+  margin:2vw;
+	float: left;
+	overflow:auto;
+}
+/*El espacio que podrá ocupar el texto dellogo de la empresa, así como las características del texto que en el se encuentra*/
+#nom_pagina{
+  width: 30vw;
+  margin-top: 2.65vw;
+  margin-bottom: 2.65vw;
+	padding: 0%;
+	border:0%;
+  float: left;
+  font-weight: bold;
+	overflow: auto;
+	letter-spacing: 3px;
+  text-align: center;
+  font-size: 3.5vw;
+}
+#actual_user{
+  width: 15vw;
+  float: right;
+  text-align: center;
+}
+#actual_user_picture{
+  width: 3.5vw;
+  float: both;
+  margin-top: 1.5vw;
+  margin-left: 5.75vw;
+  margin-right: 5.75vw;
+}
+#actual_user_picture img{
+  width: 3.5vw;
+}
+#actual_user_name{
+  width: 15vw;
+  float: both;
+  text-align: center;
+}
+/*Opciones que se encuentran en el navegador para ir a la incripcion o al inicio de sesion*/
+nav{
+  width: 26vw;
+  margin: 0%;
+  padding: 0%;
+  border: 0%;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+	font-size: 1vw;
+	float: right;
+	overflow:auto;
+	text-align: center;
+  letter-spacing: 3px;
+}
+.opc_nav{
+  margin:0%;
+  display:inline-block;
+}
+/*Los párrafos se muestran en línea*/
+p{
+	margin:0%;
+	border:0%;
+	padding:0%;
+}
+
+/*Cuando un link que se muestra en la página no ha sido previamente visitado*/
+a:link {
+	color: black;
+}
+/*Cuando el link que se muestra en la página ya ha sido visitado aparecerá de un color distinto*/
+a:visited {
+	color:#AA6957;
+}
+/*Cuando hay un link en la ´página, no aparecerá con subrayado*/
+a{
+	text-decoration: none;
+  margin:0%;
+  padding:0%;
+  border:0%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.endSession{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+/*Pop Up de adicionar un nuevo producto con sus caracteristicas*/
+#popCloseSession{
+	cursor: pointer;
+	display: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	float: left;
+	width: 20vw;
+  margin: 2vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+#popCloseSession #popUpCloseSession{
+	width: 20vw;
+	display:none;
+	background-color: #F5ECE6;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	z-index: 2;
+	left:17%;
+	right:17%;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+/*Posicion de los botones*/
+.bottons{
+  margin: 0.5vw;
+}
+
+/*FOOTER*/
+footer{
+  width: 100vw;
+  clear: both;
+}
+/*Disposicion de las opciones que se encuentra en el footer*/
+#footerOptions{
+  display: inline-block;
+  clear: both;
+  width: 25vw;
+  height: 2vw;
+  margin:0%;
+  padding:0%;
+  border:0%;
+  margin-top:3%;
+  margin-left: 37.5vw;
+  margin-right: 37.5vw;
+  text-align: center;
+  padding-left: 1.2%;
+  padding-right: 1.2%;
+}
+.footer-choices{
+  float:left;
+  text-align: center;
+  font-size: 103%;
+}

@@ -1,0 +1,106 @@
+<!-- MI CUENTA -->
+<!DOCTYPE html>
+<html>
+	<head> <!-- se van a introdcuir los metadatos: titulo, scripts,  hoja de estilo-->
+			<!--Se introduce en el meta la configuración necesaria para que la pagina web se
+			escale correctamente en los distintos dispositivos-->
+			<meta charset="utf-8" name= "viewport" content="width=device-width, initial-scale=1.0">
+			<link rel ="stylesheet" href="style/style_general.css"/>
+			<link rel ="stylesheet" href="style/style_cuenta.css"/>
+			<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+			<script src="script/javascript_cookies.js"></script>
+	</head>
+
+	<body onload="cargarDatos()">
+		<script src="script/javascript_antiguo.js"></script>
+		<script src="script/javascript_header.js"></script>
+		<header>
+			<div id = "img-titulo"> <img src="images/cookingMamma.png"/> </div>
+			<div id = "nom_pagina"><p class=ptSans>Cooking Mamma</p></div>
+			<div id="actual_user">
+				<div id="actual_user_picture"><a href="miCuenta.html"><img src="images/user.png"/></a></div>
+				<div id="actual_user_name" onclick="location.href='miCuenta.html'"><p></p></div>
+			</div>
+			<!-- El nav contiene las distintas paginas a las que se pueden acceder desde una determinada pagina-->
+			<nav>
+				<a href="tableros.html"><p class = "opc_nav">Inicio</p></a>
+				<a href="index_chat.html"><p class = "opc_nav">Mensajería</p></a>
+				<p class = "opc_nav endSession" onclick = "openPopUp('popUpCloseSession')">Cerrar Sesión</p>
+				<!-- Contenedor con pop Up de cerrar Sesion-->
+				<div id = "popCloseSession">
+					<span id = "popUpCloseSession">
+						<div id= "closeSession">
+							<!-- Mensaje de cerrar sesion-->
+							<p class = "ptSans">
+								¿Seguro que desea cerrar sesión?
+							</p>
+							<br>
+						</div>
+						<!-- Botones que sirven cerrar sesion o no-->
+						<div id= "optionsClose">
+							<button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession')">
+								Cancelar
+							</button>
+							<button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession'); location.href='index_ppal.html'">
+								Aceptar
+							</button>
+						</div>
+					</span>
+				</div>
+			</nav>
+		</header>
+			<!--fin de encabezado-->
+
+
+			<!--Datos personales-->
+			<div class="cuenta">
+			<p class = "montserrat">DATOS PERSONALES</p>
+		  </div>
+
+			<!--etiqueta usuario-->
+				<div class="etiquetasDatos"><p>Usuario:</p></div>
+				<div class="datos"><p id="userData">user</p></div>
+
+				<div class="etiquetasDatos"><p>Email:</p></div>
+				<div class="datos"><p id="emailData">email</p></div>
+
+				<div class="etiquetasDatos"><p>Nombre:</p></div>
+				<div class="datos"><p id="nameData">name</p></div>
+
+				<div class="etiquetasDatos"><p>Apellido 1:</p></div>
+				<div class="datos"><p id="surname1Data">surname1</p></div>
+
+				<div class="etiquetasDatos"><p>Apellido 2:</p></div>
+				<div class="datos"><p id="surname2Data">surname2</p></div>
+
+				<div class="etiquetasDatos"><p>Fecha de nacimiento:</p></div>
+				<div class="datos"><p id="birthdayData">birthday</p></div>
+
+
+				<!--boton editar-->
+				<button type="button" id="editar" class="boton" onclick="editarDatos()">Editar</button>
+
+				<!--boton guardar-->
+				<button type="button" id="guardar" class="boton2" onclick="guardarDatos()">Guardar cambios</button>
+
+
+
+
+				<footer>
+					<div id = "footerOptions">
+						<a class = "footer-choices"><p>Ayuda</p></a>
+						<p class = "footer-choices">|</p>
+						<a class = "footer-choices"><p>Contacto</p></a>
+						<p class = "footer-choices">|</p>
+						<a class = "footer-choices"><p>Política de Privacidad</p></a>
+					</div>
+				</footer>
+
+
+	</body>
+
+
+</html>

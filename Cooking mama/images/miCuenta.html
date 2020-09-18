@@ -1,0 +1,96 @@
+<!-- MI CUENTA -->
+<!DOCTYPE html>
+<html>
+	<head>  <!-- Titulo y enlaces externos al documento de estilo -->
+		<title>Coocking Mamma</title>
+		<link rel="shortcut icon" href="img/cooking.png"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="fonts/style.css">
+		<meta charset="UTF-8">
+		<script src="cookies.js"></script>
+	</head>
+
+	<body onload="cargarDatos()">
+		<script src="script/script.js"></script>
+			<header>
+				<!--Logo-->
+	        <img id="logo" class="img " src="img/cooking.png"/>
+
+				<!--Cooking Mamma-->
+	          <p id="titulo">Cooking Mamma</p>
+
+				<!--menu de navegacion con etiquetas en lista-->
+				<nav class="menu">
+					<ul>
+						<li><a href="">Inicio</a></li>
+						<li><a href="">Notificaciones</a></li>
+						<li><a href="">Configuración</a></li>
+					</ul>
+				</nav>
+
+				<!-- FOTO DE PERFIL USUARIO REGISTRADO -->
+				<div id="us">
+					<img id="userpic" src="img/user.png" alt="User"/>
+					<p id="username" class="point" onclick="changeToList()"> Nombre </p>
+				</div>
+			</header>
+			<!--fin de encabezado-->
+
+
+			<!--MI CUENTA-->
+			<div id="miCuenta">
+        <div id="miCuentaText" class="text ">
+          <p>MI CUENTA</p>
+        </div>
+      </div>
+
+
+			<!--etiqueta usuario-->
+				<div class="etiquetasDatos"><p>Usuario:</p></div>
+				<div class="datos"><p id="userData">user</p></div>
+
+				<div class="etiquetasDatos"><p>Email:</p></div>
+				<div class="datos"><p id="emailData">email</p></div>
+
+				<div class="etiquetasDatos"><p>Nombre:</p></div>
+				<div class="datos"><p id="nameData">name</p></div>
+
+				<div class="etiquetasDatos"><p>Apellido 1:</p></div>
+				<div class="datos"><p id="surname1Data">surname1</p></div>
+
+				<div class="etiquetasDatos"><p>Apellido 2:</p></div>
+				<div class="datos"><p id="surname2Data">surname2</p></div>
+
+				<div class="etiquetasDatos"><p>Fecha de nacimiento:</p></div>
+				<div class="datos"><p id="birthdayData">birthday</p></div>
+
+
+
+				<!--boton editar-->
+				<div id="editar">
+								<div id="editarText" class="text ">
+									<p>Editar</p>
+								</div>
+							</div>
+
+
+
+
+
+
+			<footer>
+				 <div class="fin">
+					 <ul>
+						 <li><a href="">Ayuda</a></li>
+						 <li><a class="barritas" href="">Contacto</a></li>
+						 <li><a href="">Política de Privacidad</a></li>
+					 </ul>
+			 	</div>
+
+			</footer>
+
+
+	</body>
+
+
+</html>

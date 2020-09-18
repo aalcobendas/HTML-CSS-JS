@@ -1,0 +1,73 @@
+
+
+h2{
+  text-align: center;
+
+}
+
+label {
+  margin-left: 2%;
+  font-family: 'Arial'
+}
+
+form ul li{
+	list-style: none; /*quitar los puntos del menu*/
+	padding: 10px 15px; /*Dejamos espacio de 10 px entre cada link y 12 de abajo*/
+
+}
+
+input{
+  height: 30px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color:rgba(244, 244, 244, 1);
+  margin-top: 3%;
+
+
+}
+
+#user{
+  margin-left: 30%;
+  width: 50%;
+
+
+}
+#password{
+  margin-left: 30%;
+  width: 50%;
+
+}
+
+#name{
+  margin-left: 3%;
+  width: 30%;
+
+}
+
+#lastname1{
+  width: 30%;
+
+}
+
+#apellido{
+  width: 30%;
+}
+
+#email{
+  width: 40%;
+  margin-left: 3%;
+
+}
+
+.register{
+  border: none;
+  margin-left: 50%;
+  margin-top: 5%;
+  background-color: rgba(226, 104, 107, 1);
+  font-family: 'Arial';
+  width: 10%;
+  box-shadow: 2px 2px 2px #333;
+  height: 20px;
+  cursor: pointer;
+}

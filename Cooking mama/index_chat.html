@@ -1,0 +1,435 @@
+<!DOCTYPE html> <!-- indica html5-->
+    <html> <!-- etiqueta que engloba html-->
+        <head> <!-- se van a introdcuir los metadatos: titulo, scripts,  hoja de estilo-->
+            <!--Se introduce en el meta la configuración necesaria para que la pagina web se
+            escale correctamente en los distintos dispositivos-->
+            <meta charset="utf-8" name= "viewport" content="width=device-width, initial-scale=1.0">
+            <link rel ="stylesheet" href="style/style_chat.css"/>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+            <script src = "script/javascript_cookies.js">
+            </script>
+        </head>
+
+      <body onload="cargarNombre()">
+        <script src = "script/javascript_chat.js">
+        </script>
+        <!-- Caracteristicas del header, que contiene la imagen del logo, el nombre de logo de la pagina,
+        ademas del nav y el usuario de la pagina actual, clickando en el boton de la imagen se accede a la
+        cuenta actual del usuario-->
+        <header>
+          <div id = "img-titulo"> <img src="images/cookingMamma.png"/> </div>
+          <div id = "nom_pagina"><p class=ptSans>Cooking Mamma</p></div>
+          <div id="actual_user">
+            <div id="actual_user_picture"><img src="images/user.png"/></a></div>
+            <div id="actual_user_name" onclick="location.href='miCuenta.html'"><p>Pepe Mayuelas</p></div>
+          </div>
+          <!-- El nav contiene las distintas paginas a las que se pueden acceder desde una determinada pagina-->
+          <nav>
+            <a href="tableros.html"><p class = "opc_nav">Inicio</p></a>
+            <a href="index_chat.html"><p class = "opc_nav">Mensajería</p></a>
+            <p class = "opc_nav endSession" onclick = "openPopUp('popUpCloseSession')">Cerrar Sesión</p>
+            <!-- Contenedor con pop Up de cerrar Sesion-->
+            <div id = "popCloseSession">
+              <span id = "popUpCloseSession">
+                <div id= "closeSession">
+                  <!-- Mensaje de cerrar sesion-->
+                  <p class = "ptSans">
+                    ¿Seguro que desea cerrar sesión?
+                  </p>
+                  <br>
+                </div>
+                <!-- Botones que sirven cerrar sesion o no-->
+                <div id= "optionsClose">
+                  <button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession')">
+                    Cancelar
+                  </button>
+                  <button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession'); location.href='index_ppal.html'">
+                    Aceptar
+                  </button>
+                </div>
+              </span>
+            </div>
+          </nav>
+        </header>
+        <main>
+          <!-- Contedor con los actuales chat abiertos de la persona, el titulo de la seccion y el boton para añadir un chat-->
+          <div class = "recentChats">
+            <p class = "montserrat">CHATS RECIENTES</p>
+          </div>
+          <!-- Contenedor con tan solo los diferentes chats abiertos y el boton para añadir chat con su popUp-->
+          <div id = "openChats">
+            <!-- Contenedor con los chats abiertos-->
+            <div id = "chats">
+              <!-- Contenedor con el primer chat-->
+              <div class = "friendsChats notActiveChat" id = "friend1">
+              <!-- Contenedor con la imagen del amigo a chattear-->
+                <div class = "photoFriend">
+                  <img src="images/person1.png"/>
+                </div>
+                <!-- Contenedor con el nombre del amigo a chattear, dando click se abre el chat con la persona-->
+                <div class = "nameFriend" onclick="activateChat('friend1')">
+                  <p class = "montserrat">Aritz</p>
+                </div>
+                <!--Contenedor que muestra la imagen para cerrar un chat-->
+                <div class = "closeChat" onclick="openPopUp('popUpCloseChat1')">
+                  <img class = "notOverlay" src="images/error2.png"/>
+                  <div class="overlay">
+                      <img class= "icon" src="images/error.png"/>
+                  </div>
+                </div>
+                <!-- Contenedor con el ultimo mensaje del amigo a chattear-->
+                <div class = "lastMessage">
+                  <p class = "montserrat">¡Eskerrik asko!</p>
+                </div>
+                <!-- Contenedor con la hora del ultimo mensaje del amigo a chattear-->
+                <div class = "timeFriend">
+                  <p class = "montserrat">12.18</p>
+                </div>
+                <!-- Contenedor con pop Up de cerrar chat-->
+                <div class = "popCloseChat">
+                  <span class = "popUpCloseChat" id = "popUpCloseChat1">
+                    <div class= "closeChatMsg">
+                      <!-- Mensaje de cerrar chat-->
+                      <p class = "ptSans">
+                        ¿Seguro que desea cerrar el chat?
+                      </p>
+                      <br>
+                    </div>
+                    <!-- Botones que sirven para cerrar un chat o no-->
+                    <div id= "optionsClose">
+                      <button class = "bottons ptSans" onclick="closePopUp('popUpCloseChat1')">
+                        Cancelar
+                      </button>
+                      <button class = "bottons ptSans" onclick="deleteChat('popUpCloseChat1')">
+                        Aceptar
+                      </button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <!-- Contenedor con el segundo chat-->
+              <div class = "friendsChats notActiveChat" id = "friend2">
+                <!-- Contenedor con la imagen del amigo a chattear-->
+                <div class = "photoFriend">
+                  <img src="images/person2.png"/>
+                </div>
+                <!-- Contenedor con el nombre del amigo a chattear, dando click se abre el chat con la persona-->
+                <div class = "nameFriend" onclick="activateChat('friend2')">
+                  <p class = "montserrat">Irati</p>
+                </div>
+                <!--Contenedor que muestra la imagen para cerrar un chat-->
+                <div class = "closeChat" onclick="openPopUp('popUpCloseChat2')">
+                  <img class = "notOverlay" src="images/error2.png"/>
+                  <div class="overlay">
+                      <img class= "icon" src="images/error.png"/>
+                  </div>
+                </div>
+                <!-- Contenedor con el ultimo mensaje del amigo a chattear-->
+                <div class = "lastMessage">
+                  <p class = "montserrat">Luego te paso la receta</p>
+                </div>
+                <!-- Contenedor con la hora del ultimo mensaje del amigo a chattear-->
+                <div class = "timeFriend">
+                  <p class = "montserrat">11.19</p>
+                </div>
+                <!-- Contenedor con pop Up de cerrar chat-->
+                <div class = "popCloseChat">
+                  <span class = "popUpCloseChat" id = "popUpCloseChat2">
+                    <div class= "closeChatMsg">
+                      <!-- Mensaje de cerrar chat-->
+                      <p class = "ptSans">
+                        ¿Seguro que desea cerrar el chat?
+                      </p>
+                      <br>
+                    </div>
+                    <!-- Botones que sirven para cerrar un chat o no-->
+                    <div id= "optionsClose">
+                      <button class = "bottons ptSans" onclick="closePopUp('popUpCloseChat2')">
+                        Cancelar
+                      </button>
+                      <button class = "bottons ptSans" onclick="deleteChat('popUpCloseChat2')">
+                        Aceptar
+                      </button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <!-- Contenedor con el tercer chat-->
+              <div class = "friendsChats notActiveChat" id = "friend3">
+                <!-- Contenedor con la imagen del amigo a chattear-->
+                <div class = "photoFriend">
+                  <img src="images/person3.png"/>
+                </div>
+                <!-- Contenedor con el nombre del amigo a chattear, dando click se abre el chat con la persona-->
+                <div class = "nameFriend" onclick="activateChat('friend3')">
+                  <p class = "montserrat">Iker</p>
+                </div>
+                <!--Contenedor que muestra la imagen para cerrar un chat-->
+                <div class = "closeChat" onclick="openPopUp('popUpCloseChat3')">
+                  <img class = "notOverlay" src="images/error2.png"/>
+                  <div class="overlay">
+                      <img class= "icon" src="images/error.png"/>
+                  </div>
+                </div>
+                <!-- Contenedor con el ultimo mensaje del amigo a chattear-->
+                <div class = "lastMessage">
+                  <p class = "montserrat">El domingo lo pruebo abuelo</p>
+                </div>
+                <!-- Contenedor con la hora del ultimo mensaje del amigo a chattear-->
+                <div class = "timeFriend">
+                  <p class = "montserrat">9.23</p>
+                </div>
+                <!-- Contenedor con pop Up de cerrar chat-->
+                <div class = "popCloseChat">
+                  <span class = "popUpCloseChat" id = "popUpCloseChat3">
+                    <div class= "closeChatMsg">
+                      <!-- Mensaje de cerrar chat-->
+                      <p class = "ptSans">
+                        ¿Seguro que desea cerrar el chat?
+                      </p>
+                      <br>
+                    </div>
+                    <!-- Botones que sirven para cerrar un chat o no-->
+                    <div class= "optionsClose">
+                      <button class = "bottons ptSans" onclick="closePopUp('popUpCloseChat3')">
+                        Cancelar
+                      </button>
+                      <button class = "bottons ptSans" onclick="deleteChat('popUpCloseChat3')">
+                        Aceptar
+                      </button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Contenedor con el icono de adicionar un nuevo chat, con un hover-->
+            <div id = "openNewChat" onclick = "openPopUp('popUpAddChat')">
+              <img class = "notOverlay" src="images/add.png"/>
+              <div class="overlay">
+                  <img class= "icon" src="images/add2.png"/>
+              </div>
+            </div>
+            <!-- Contenedor con pop Up de adicionar un nuevo chat con un amigo-->
+            <div id = "popAddChat">
+                <span id = "popUpAddChat">
+                    <div id= "newChatToOpen">
+                      <!-- Se debe introducir el nombre del amigo-->
+                        <p class = "ptSans">
+                            Empezar conversación con...
+                            <input id="newFriendChat" onfocus="this.value=''" required type="text" maxlength = "30"/>
+                        </p>
+                        <br>
+                    </div>
+                    <!-- Botones que sirven para adicionar o un nuevo chat o salir de la posibilidad de abrir uno nuevo-->
+                    <div id= "opcionesAdicion">
+                        <button class = "bottons ptSans" onclick="closePopUp('popUpAddChat')">
+                            Cancelar
+                        </button>
+                        <button class = "bottons ptSans" onclick="closePopUp('popUpAddChat'); openNewChat()">
+                            Aceptar
+                        </button>
+                    </div>
+                </span>
+            </div>
+          </div>
+          <!-- Contenedor con el espacio de chat actual abierto, mientras que no se seleccione ningun amigo, permanecera en blanco-->
+          <div id = "currentChat">
+            <!-- Primer chat vinculado con el primer chat activo-->
+            <div class = "currentOpenedChat notOpened" id = "chat1">
+              <!-- Se establece el nombre de la persona con la que se chatea-->
+              <div class = "currentChatter montserrat">
+                <p>Aritz</p>
+              </div>
+              <!-- Contenedor con los mensajes a intercambiar-->
+              <div class = "chatBox" id ="chatBox1">
+                <!-- Contenedor con el mensaje primero del primer chat, que corresponde al usuario actual-->
+                <div class = "messages sender">
+                  <!-- Contenedor con el primer mensaje enviado-->
+                  <div class = "msgText">
+                    <p class = "montserrat">¿Te llegó la receta de bacalao? <br> Creo que no se envió</p>
+                  </div>
+                  <!-- Contenedor con la hora del mensaje-->
+                  <p class = "hour montserrat">11.36</P>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Sí llegó, cuando la haga te digo</p>
+                    <p class = "hour montserrat">12.00</P>
+                  </div>
+                </div>
+                <div class = "messages sender">
+                  <div class = "msgText">
+                    <p class = "montserrat">Espero que te guste</p>
+                    <p class = "hour montserrat">12.02</P>
+                  </div>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Seguro que sí</p>
+                    <p class = "hour montserrat">12.14</P>
+                  </div>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Tienes un paladar estupendo</p>
+                    <p class = "hour montserrat">12.14</P>
+                  </div>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">¡Eskerrik asko!</p>
+                    <p class = "hour montserrat">12.18</P>
+                  </div>
+                </div>
+              </div>
+              <!-- Contenedor con el texto que se escribe para enviar como nuevo y el icono de envio-->
+              <div class = "writeNewMessage">
+                <div class = "typedNewMessage">
+                  <input class = "newMsg" id="newMsg1" onfocus="this.value=''" type="text" placeholder="Escribe un nuevo mensaje..."/>
+                </div>
+                <!-- Contenedor con el icono de envio-->
+                <div class = "sendNewMessage" onclick="sendMessage('newMsg1')">
+                  <img class = "notOverlay" src="images/send2.png"/>
+                  <div class="overlay">
+                      <img class= "icon" src="images/send.png"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class = "currentOpenedChat notOpened" id = "chat2">
+              <div class = "currentChatter montserrat">
+                <p>Irati</p>
+              </div>
+              <!-- Contenedor con los mensajes a intercambiar-->
+              <div class = "chatBox" id ="chatBox2">
+                <!-- Contenedor con el mensaje primero del primer chat, que corresponde al usuario actual-->
+                <div class = "messages sender">
+                  <!-- Contenedor con el primer mensaje enviado-->
+                  <div class = "msgText">
+                    <p class = "montserrat"> ¡Buenos días Irati! <br> ¿Cómo se llamaba la receta de la que me hablaste el otro día?</p>
+                  </div>
+                  <!-- Contenedor con la hora del mensaje-->
+                  <p class = "hour montserrat">9.34</P>
+                </div>
+                <div class = "messages sender">
+                  <div class = "msgText">
+                    <p class = "montserrat"> Que vienen mis nietos este fin de semana y me gustaría probar algo nuevo</p>
+                  </div>
+                  <p class = "hour montserrat">9.36</P>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">¿Era de carne?</p>
+                    <p class = "hour montserrat">10.10</P>
+                  </div>
+                </div>
+                <div class = "messages sender">
+                  <div class = "msgText">
+                    <p class = "montserrat">¡Sí! Sonaba riquísima</p>
+                  </div>
+                  <p class = "hour montserrat">10.15</P>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Es el Cordon Bleu</p>
+                    <p class = "hour montserrat">11.14</P>
+                  </div>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Luego te paso la receta</p>
+                    <p class = "hour montserrat">11.19</P>
+                  </div>
+                </div>
+              </div>
+              <!-- Contenedor con el texto que se escribe para enviar como nuevo y el icono de envio-->
+              <div class = "writeNewMessage">
+                <div class = "typedNewMessage">
+                  <input class = "newMsg" id="newMsg2" onfocus="this.value=''" type="text" placeholder="Escribe un nuevo mensaje..."/>
+                </div>
+                <!-- Contenedor con el icono de envio-->
+                <div class = "sendNewMessage" onclick="sendMessage('newMsg2')">
+                  <img class = "notOverlay" src="images/send2.png"/>
+                  <div class="overlay">
+                      <img class= "icon" src="images/send.png"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class = "currentOpenedChat notOpened" id = "chat3">
+              <div class = "currentChatter montserrat">
+                <p>Iker</p>
+              </div>
+              <!-- Contenedor con los mensajes a intercambiar-->
+              <div class = "chatBox" id ="chatBox3">
+                <!-- Contenedor con el mensaje primero del primer chat, que corresponde al usuario actual-->
+                <div class = "messages receiver">
+                  <!-- Contenedor con el primer mensaje enviado-->
+                  <div class = "msgText">
+                    <p class = "montserrat">¡Abuelo!</p>
+                  </div>
+                  <!-- Contenedor con la hora del mensaje-->
+                  <p class = "hour montserrat">1.36</P>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Páseme la receta de los macarrones que haces</p>
+                    <p class = "hour montserrat">1.37</P>
+                  </div>
+                </div>
+                <div class = "messages sender">
+                  <div class = "msgText">
+                    <p class = "montserrat">¿Los vas a probar a hacer?</p>
+                    <p class = "hour montserrat">1.14</P>
+                  </div>
+                </div>
+                <div class = "messages sender">
+                  <div class = "msgText">
+                    <p class = "montserrat">Ya te la he pasado</p>
+                    <p class = "hour montserrat">8.10</P>
+                  </div>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">Gracias!!</p>
+                    <p class = "hour montserrat">9.23</P>
+                  </div>
+                </div>
+                <div class = "messages receiver">
+                  <div class = "msgText">
+                    <p class = "montserrat">El domingo lo pruebo abuelo</p>
+                    <p class = "hour montserrat">9.23</P>
+                  </div>
+                </div>
+              </div>
+              <!-- Contenedor con el texto que se escribe para enviar como nuevo y el icono de envio-->
+              <div class = "writeNewMessage">
+                <div class = "typedNewMessage">
+                  <input class = "newMsg" id="newMsg3" onfocus="this.value=''" type="text" placeholder="Escribe un nuevo mensaje..."/>
+                </div>
+                <!-- Contenedor con el icono de envio-->
+                <div class = "sendNewMessage" onclick="sendMessage('newMsg3')">
+                  <img class = "notOverlay" src="images/send2.png"/>
+                  <div class="overlay">
+                      <img class= "icon" src="images/send.png"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div id = "footerOptions">
+            <a class = "footer-choices"><p>Ayuda</p></a>
+            <p class = "footer-choices">|</p>
+            <a class = "footer-choices"><p>Contacto</p></a>
+            <p class = "footer-choices">|</p>
+            <a class = "footer-choices"><p>Política de Privacidad</p></a>
+          </div>
+        </footer>
+      </body>
+  </html>

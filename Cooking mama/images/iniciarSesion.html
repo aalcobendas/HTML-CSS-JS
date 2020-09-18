@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>  <!-- Titulo y enlaces externos al documento de estilo -->
+		<title>Coocking Mamma</title>
+		<link rel="shortcut icon" href="img/cooking.png"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="fonts/style.css">
+		<meta charset="UTF-8">
+		<script src="cookies.js"></script>
+	</head>
+
+	<body>
+		<script src="script/script.js"></script>
+			<header>
+				<!--Logo-->
+	        <img id="logo" class="img " src="img/cooking.png"/>
+
+				<!--Cooking Mamma-->
+	          <p id="titulo">Cooking Mamma</p>
+
+				<!--menu de navegacion con etiquetas en lista-->
+				<nav class="menu">
+					<ul>
+						<li><a href="">Inicio</a></li>
+						<li><a href="">Notificaciones</a></li>
+						<li><a href="">Configuración</a></li>
+					</ul>
+				</nav>
+
+				<!-- FOTO DE PERFIL USUARIO REGISTRADO -->
+				<div id="us">
+					<img id="userpic" src="img/user.png" alt="User"/>
+					<p id="username"> Nombre </p>
+				</div>
+			</header>
+			<!--fin de encabezado-->
+
+<div id= "iniciar">
+  <h2> Iniciar Sesion </h2> <!-- TITULO INICIO DE SESION-->
+  <form action= "#">
+    <ul class= "lista">
+      <li>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario" required >
+      </li>
+
+      <li>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required maxlength="8" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="La contraseña debe empezar con una letra y contener al menos un dígito">
+      </li>
+    </ul>
+		<p id="mE1" class="noVisible"> Usuario o contraseña incorrectos </p>
+
+		<button type="button" class="inic" name="button" onclick="iniciarSesion()">Iniciar sesión</button>
+
+  </form>
+</div>
+
+
+<footer>
+   <div class="fin">
+     <ul>
+       <li><a href="">Ayuda</a></li>
+       <li><a class="barritas" href="">Contacto</a></li>
+       <li><a href="">Política de Privacidad</a></li>
+     </ul>
+  </div>
+
+</footer>
+
+
+</body>
+
+
+</html>

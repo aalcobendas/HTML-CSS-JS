@@ -1,0 +1,287 @@
+#mitablero{
+	background-color:rgba(232, 177, 175, 1);
+	box-sizing:border-box;
+	border: 1px solid  black;
+	border-radius:10px;
+  left:822px;
+  top:265px;
+  width:270px;
+  height:39px;
+  display:flex;
+  font-size:33px;
+  color:black;
+	float: left;
+	margin-left: 39%;
+	margin-top: 6%;
+	margin-bottom: 2%;
+
+}
+
+#texto_tablero{
+	align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+	font-family:'Arial';
+  font-weight:400;
+  font-style:normal;
+  letter-spacing:normal;
+  color:#333333;
+  vertical-align:none;
+  text-align:center;
+  line-height:normal;
+  text-transform:none;
+
+}
+
+#ayuda{
+  width: 60%;
+  height: auto;
+  border: 2px solid black;
+ 	margin-left: 20%;
+	margin-right: 10%;
+	margin-top: 10%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background-color: #F5ECE6;
+	opacity: 0.8;
+}
+
+#ayuda_text{
+	width: 50%;
+	margin-left: 30%;
+	border: 0px solid black;
+	position: relative;
+	box-sizing: border-box;
+	margin-top: 1%;
+	text-align: center;
+
+ }
+
+ #ayuda_text p{
+	 text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);
+	 -moz-text-shadow:1px 1px 5px rgba(0, 0, 0, 0.647058823529412);
+	 font-family:'Arial';
+	 font-size:30px;
+ }
+
+
+
+.paso{
+	margin-top: 2%;
+	width: 40%;
+	border: 0px solid black;
+	margin-left: 27%;
+}
+.paso p{
+	font-size:20px;
+	text-align: center;
+
+}
+
+#nom{
+	text-transform: uppercase;
+}
+#texto_ayuda1{
+	width: 50%;
+	margin-left: 30%;
+	width: 50%;
+	margin-left: 30%;
+	border: 0px solid black;
+	text-align: justify;
+
+}
+#boton_crear{
+	width: 40%;
+	height: 20%;
+	border: 1px solid black;
+	margin-left: 30%;
+	background-color:rgba(232, 161, 175, 1);
+	padding: 1%;
+	overflow: hidden;
+	border-radius: 20px;
+	margin-bottom: 5%;
+	margin-top: 2%;
+
+}
+
+
+.next{
+	border: 0px solid black;
+	width: 3%;
+	float: right;
+	margin-right: 1%;
+}
+
+
+
+
+#siguiente{
+	width: 100%;
+	height: 100%;
+
+}
+
+#boton_crear p{
+	align-self:center;
+  padding:2px 2px 2px 2px;
+  box-sizing:border-box;
+  width:100%;
+	font-family:'Arial';
+  font-weight:400;
+  font-style:normal;
+  letter-spacing:normal;
+  color:#333333;
+  vertical-align:none;
+  text-align:center;
+  line-height:normal;
+  text-transform:none;
+}
+
+#plus{
+	width: 10%;
+	height: 10%;
+	float: right;
+	border-radius: 2px;
+	margin-top: 7%;
+
+}
+
+.paso #dos{
+	display: none;
+}
+
+.paso #tres{
+	display: none;
+}
+
+#circle{
+	width: 15%;
+	height: 10%;
+	border: 0px solid black;
+	overflow: hidden;
+	margin-left: 45%;
+	margin-top: 1%;
+    margin-bottom: 1%;
+}
+.circulo{
+  width: 20px;
+  height: 20px;
+   -moz-border-radius: 50%;
+   -webkit-border-radius: 50%;
+   border-radius: 50%;
+   background: grey;
+	 float: left;
+
+}
+#a{
+	background: black;
+}
+
+#b{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+#insert{
+	border: 1px solid grey;
+	width: 30%;
+	text-align: center;
+	border-radius: 10px;
+	height: auto;
+	color: grey;
+	position: relative;
+	margin-top: 2%;
+	margin-left: 30%;
+	/*display: none;*/
+
+}
+
+
+#texto_ayuda2{
+	width: 50%;
+	margin-left: 30%;
+	width: 50%;
+	margin-left: 20%;
+	border: 0px solid black;
+	display: none;
+}
+
+#upload{
+	width: 5%;
+	height: 5%;
+	position: relative;
+	float: right;
+	margin-right: 30%;
+}
+
+#descripcion{
+	width: 60%;
+	height: 50%;
+	border: 1px solid grey;
+	margin-left: 20%;
+	margin-top: 1%;
+	color: grey;
+	border-radius: 10px;
+	text-align: center;
+
+}
+
+#mas{
+	width: 3%;
+	height: 3%;
+}
+
+#texto_ayuda3{
+	width: 50%;
+	margin-left: 30%;
+	text-align: justify;
+	display: none;
+
+}
+
+/*Footer*/
+footer{
+	clear: both;
+	width: auto;
+	height: 60px;
+	margin-top: 2%;
+}
+
+/*LINKS FOOTER*/
+
+.fin{
+	width: auto;
+	height: 50px;
+	margin-right: 35%;
+	margin-left: 35%;
+}
+
+.fin ul li{
+	list-style: none; /*quitar los puntos del menu*/
+	float: left;  /*para cada enlace se pone a la izda y se ven en horizontal*/
+
+}
+
+.fin ul li a{
+	text-decoration: none; /*Quitamos color a los botones del menu*/
+	padding: 5px 10px; /*Dejamos espacio de 10 px entre cada link y 12 de abajo*/
+	border: 0px solid #ccc; /*se le pone una cajetilla para cada enlace con 1px pero lo dejamos a 0 para que no se vea*/
+	box-sizing: border-box; /*controla las anchuras correctas para el uso del padding*/
+	color: black; /*color del texto rojo*/
+
+}
+
+
+.fin ul li a:hover{ /*Hover permite añadir transiciones al menu*/
+	background: #e0e0e0;
+	color: black;
+	transition: background 1s, color 1s;
+}
+
+.fin ul li a.barritas{
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>  <!-- Titulo y enlaces externos al documento de estilo -->
+  <title>Coocking Mamma</title>
+  <meta charset="utf-8" name= "viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" href="style/style_chat.css"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/cooking.png"/>
+  <link rel="stylesheet" type="text/css" href="style/style_tableros.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <script src="script/javascript_cookies.js"></script>
+
+</head>
+<script src="script/javascript_tableros.js"></script>
+<body onload="cargarNombre()">
+
+  <header>
+    <div id = "img-titulo"> <img src="images/cookingMamma.png"/> </div>
+    <div id = "nom_pagina"><p class="ptSans">Cooking Mamma</p></div>
+    <div id="actual_user">
+      <div id="actual_user_picture"><a href="miCuenta.html"><img src="images/user.png"/></a></div>
+      <div id="actual_user_name" onclick="location.href='miCuenta.html'"><p></p></div>
+    </div>
+    <!-- El nav contiene las distintas paginas a las que se pueden acceder desde una determinada pagina-->
+    <nav>
+      <a href="tableros.html"><p class = "opc_nav">Inicio</p></a>
+      <a href="index_chat.html"><p class = "opc_nav">Mensajería</p></a>
+      <p class = "opc_nav endSession" onclick = "openPopUp('popUpCloseSession')">Cerrar Sesión</p>
+      <!-- Contenedor con pop Up de cerrar Sesion-->
+      <div id = "popCloseSession">
+        <span id = "popUpCloseSession">
+          <div id= "closeSession">
+            <!-- Mensaje de cerrar sesion-->
+            <p class = "ptSans">
+              ¿Seguro que desea cerrar sesión?
+            </p>
+            <br>
+          </div>
+          <!-- Botones que sirven cerrar sesion o no-->
+          <div id= "optionsClose">
+            <button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession')">
+              Cancelar
+            </button>
+            <button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession'); location.href='index_ppal.html'">
+              Aceptar
+            </button>
+          </div>
+        </span>
+      </div>
+    </nav>
+  </header>
+    <!--fin de encabezado-->
+      <div id="mitablero">
+        <div class="texto_tablero">
+          <p><span>MIS TABLEROS</span></p>
+        </div>
+      </div>
+      <!--boton añadir-->
+				<div id="añadir_tab">
+          <div id= añadir>
+            <img id="img_añadir" class="img_añadir " src="images/plus.png"onclick= "myFunctionOpen('AdicionTablero')"/>
+          </div>
+
+								<div class="añadirText" onclick= "myFunctionOpen('AdicionTablero')">
+									<p>Añadir tablero </p>
+								</div>
+        </div>
+
+
+
+        <div class = "PopAdicionarTablero">
+            <span class = "PopupAdicionarTablero" id = "AdicionTablero">
+                <div class= "newTablero">
+                    <p>
+                        Introduzca el nombre del tablero:
+                        <input  id="adicionNombre" required type="text" maxlength = "20"/>
+                    </p>
+                    <p>
+                        Seleccione una foto:
+                        <label  for= "picture" class="labelMovil"></label>
+                        <input  id="adicionImagen"  type="file" accept = "images/*" name="nuevaImagenMovil" onchange="cargarImagenTablero(event)"/>
+                    </p>
+                    <p>
+                        Introduzca un texto de descripción:
+                        <input  id="adicionTexto" required type="text"/>
+                    </p>
+                </div>
+                <div class= "opcionesAdicion">
+                    <button class = "botonesAdicion" onclick="myFunctionClose()">
+                        Cancelar
+                    </button>
+                    <button type="button" class="botonesAdicion" onclick="añadirTablero(this, 'tableroA')"> Aceptar</button>
+                </div>
+            </span>
+        </div>
+        <div id="todosTableros">
+
+
+          </div>
+
+
+        <div id="tableroA">
+          <span id= "tablerosArchivados">
+                <p class= "textArch">TABLEROS ARCHIVADOS</p>
+                    <img class="x" src="images/x.png"onclick= "Cerrar('tablerosArchivados')"/>
+
+          </span>
+         </div>
+
+
+
+      <div id="tablerosCompartidos">
+
+
+
+        <div id="tableroComp">
+            <div class="texto_tablero">
+              <p><span>TABLEROS COMPARTIDOS</span></p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+    <!--fin de encabezado-->
+    <footer>
+       <div class="fin">
+         <ul>
+           <li><a href="">Ayuda</a></li>
+           <li><a class="barritas" href="">Contacto</a></li>
+           <li><a href="">Política de Privacidad</a></li>
+         </ul>
+      </div>
+
+    </footer>
+  </body>
+
+
+</html>

@@ -1,0 +1,67 @@
+.point{
+	cursor: pointer;
+}
+
+.noVisible{
+	display: none;
+}
+
+
+.cuenta{
+	font-size: 1.1vw;
+	letter-spacing: 0.2vw;
+	margin-left: 800px;
+	margin-bottom: 50px;
+}
+
+
+/*Etiquetas*/
+.etiquetasDatos{
+	width: 15%;
+	margin-left: 28%;
+	text-align:right;
+	font-weight: 700;
+	cursor: default;
+	margin-bottom: 1%;
+}
+
+/*Info cuenta*/
+.datos{
+	width: 20%;
+	margin-left: 45%;
+	float: left;
+	margin-top: -2.2%;
+}
+
+
+.boton{
+	border: none;
+	background-color: #F5ECE6;
+	font-family: 'Arial';
+	width: 10%;
+	box-shadow: 2px 2px 2px #333;
+	height: 20px;
+	cursor: pointer;
+	position: initial;
+}
+
+.boton2{
+	border: none;
+	background-color: #F5ECE6;
+	font-family: 'Arial';
+	width: 10%;
+	box-shadow: 2px 2px 2px #333;
+	height: 20px;
+	cursor: pointer;
+	position: initial;
+	display: none;
+	float: left;
+	margin-top: -250px;
+	margin-left: 1200px;
+}
+
+#editar{
+	float: left;
+	margin-top: -250px;
+	margin-left: 1200px;
+}

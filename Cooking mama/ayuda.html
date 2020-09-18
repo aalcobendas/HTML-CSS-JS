@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>  <!-- Titulo y enlaces externos al documento de estilo -->
+
+
+  <meta charset="utf-8" name= "viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" href="style/style_general.css"/>
+  <link rel="stylesheet" type="text/css" href="style/style_guia.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="script/javascript_cookies.js"></script>
+</head>
+
+<body onload="nombreUsuario()">
+  <script src="script/javascript_guia.js"></script>
+
+  <header>
+    <div id = "img-titulo"> <img src="images/cookingMamma.png"/> </div>
+    <div id = "nom_pagina"><p class=ptSans>Cooking Mamma</p></div>
+    <div id="actual_user">
+      <div id="actual_user_picture"><a href="miCuenta.html"><img src="images/user.png"/></a></div>
+      <div id="actual_user_name" onclick="location.href='miCuenta.html'"><p></p></div>
+    </div>
+    <!-- El nav contiene las distintas paginas a las que se pueden acceder desde una determinada pagina-->
+    <nav>
+      <a href="tableros.html"><p class = "opc_nav">Inicio</p></a>
+      <a href="index_chat.html"><p class = "opc_nav">Mensajería</p></a>
+      <p class = "opc_nav endSession" onclick = "openPopUp('popUpCloseSession')">Cerrar Sesión</p>
+      <!-- Contenedor con pop Up de cerrar Sesion-->
+      <div id = "popCloseSession">
+        <span id = "popUpCloseSession">
+          <div id= "closeSession">
+            <!-- Mensaje de cerrar sesion-->
+            <p class = "ptSans">
+              ¿Seguro que desea cerrar sesión?
+            </p>
+            <br>
+          </div>
+          <!-- Botones que sirven cerrar sesion o no-->
+          <div id= "optionsClose">
+            <button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession')">
+              Cancelar
+            </button>
+            <button class = "bottons ptSans" onclick="closePopUp('popUpCloseSession'); location.href='index_ppal.html'">
+              Aceptar
+            </button>
+          </div>
+        </span>
+      </div>
+    </nav>
+  </header>
+    <!--fin de encabezado-->
+
+      <div id="mitablero">
+        <div id="texto_tablero">
+          <p><span>MIS TABLEROS</span></p>
+        </div>
+      </div>
+
+      <div id="ayuda">
+          <div id="ayuda_text">
+            <p><span>BIENVENIDO/A <p id= "nom">ANTXON</p></span></p>
+          </div>
+          <div class="paso">
+            <p><span id="uno">1º CREA TU PRIMER TABLERO</span></p>
+            <p><span id= "dos">2º AÑADE UN TEXTO Y UNA IMAGEN A TU TABLERO</span></p>
+            <p><span id= "tres">3º AÑADE LISTAS A TU TABLERO</span></p>
+
+          </div>
+
+          <div class="next">
+            <img id= "siguiente" class="point" src="images/next.png" alt="next" onclick="aparecer()"/>
+          </div>
+
+          <div id="texto_ayuda1">
+            <p><span>Para crear tu primer tablero pulsa en el botón. Añade una imagen y un texto descriptivo. Esta será tu página personal. Puedes añadir más tableros y compartirlos con tu amigos. </span></p>
+
+            <div id="boton_crear">
+              <img id="plus" src="images/plus.png" alt="añadir" />
+              <p><span>Añadir tablero</span></p>
+            </div>
+          </div>
+
+
+          <div id="texto_ayuda2">
+            <div id="contener">
+              <img id="upload" src="images/upload.png" alt="subir foto" />
+
+              <div id="insert">
+                <p><span> Insertar imagen</span></p>
+              </div>
+            </div>
+
+            <div id="descripcion">
+              <p><span>Descripción</span></p>
+
+            </div>
+          </div>
+
+          <div id="texto_ayuda3">
+              <p><span>Pulsa sobre el título de tu tablero para añadir tus recetas. Es tan sencillo como pulsar el botón con un     <image id="mas" src="images/plus.png" alt="subir foto" />
+, pero si tienes cualquier duda, no dudes en consultar con nosotros.</span></p>
+          </div>
+
+          <div id="circle">
+            <div class="circulo" id="a">
+            </div>
+            <div class="circulo" id="b">
+            </div>
+            <div class="circulo" id="c">
+            </div>
+          </div>
+      </div>
+
+      <footer>
+      <div id = "footerOptions">
+        <a class = "footer-choices"><p>Ayuda</p></a>
+        <p class = "footer-choices">|</p>
+        <a class = "footer-choices"><p>Contacto</p></a>
+        <p class = "footer-choices">|</p>
+        <a class = "footer-choices"><p>Política de Privacidad</p></a>
+      </div>
+    </footer>
+
+
+</body>
+</html>

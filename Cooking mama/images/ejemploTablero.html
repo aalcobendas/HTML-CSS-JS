@@ -1,0 +1,122 @@
+<!-- MI CUENTA -->
+<!DOCTYPE html>
+<html>
+	<head>  <!-- Titulo y enlaces externos al documento de estilo -->
+		<title>Coocking Mamma</title>
+		<link rel="shortcut icon" href="img/cooking.png"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styleLista.css">
+		<link rel="stylesheet" href="fonts/style.css">
+		<meta charset="UTF-8">
+		<script src="cookies.js"></script>
+	</head>
+
+	<body onload="cargarDatos()">
+		<script src="script/scriptLista.js"></script>
+			<header>
+				<!--Logo-->
+	        <img id="logo" class="img " src="img/cooking.png"/>
+
+				<!--Cooking Mamma-->
+	          <p id="titulo">Cooking Mamma</p>
+
+				<!--menu de navegacion con etiquetas en lista-->
+				<nav class="menu">
+					<ul>
+						<li><a href="">Inicio</a></li>
+						<li><a href="">Notificaciones</a></li>
+						<li><a href="">Configuración</a></li>
+					</ul>
+				</nav>
+
+				<!-- FOTO DE PERFIL USUARIO REGISTRADO -->
+				<div id="us">
+					<img id="userpic" src="img/user.png" alt="User"/>
+					<p id="username" class="point" onclick="changeToAccount()"> Nombre </p>
+				</div>
+			</header>
+			<!--fin de encabezado-->
+			<main>
+				<!-- Cajetilla Add-->
+				<div class="divAdd">
+					<div class= "cajetillaAdd">
+						<h3 class="crearNuevoTitulo"> Añadir Lista </h3>
+
+						<!--BOTON AÑADIR y su tooltip-->
+
+						<div class="tooltipA bottom">
+							<div class="adding">
+								<img class="plus" src="img/plus.png" alt="añadir" onclick="abrirPopUpAL(this)" />
+							</div>
+							<span class="tiptextA">Añadir lista</span>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div id="todasListas">
+
+				</div>
+
+				<!--popup añadir lista-->
+
+				<div class="popupAL" id="popupAddList">
+					<span class="popuptextAL">
+						<br>
+						<label for="text" class="textoPopupAL"> Introduzca nombre de la lista: </label>
+						<input type="text" id="textAL" />
+						<br>
+						<button type="button" id="BtnAdd" onclick="añadirLista(this)">Añadir</button>
+						<button type="button" id="BtnCancel" onclick="cerrarPopUpAL()">Cancelar</button>
+					</span>
+				</div>
+
+				<!--popup añadir receta-->
+
+				<div class="popupAL" id="popupAR">
+						<span class="popuptextA">
+							<br>
+							<label for="text" class="textoPopupA"> Introduzca nombre de la receta: </label>
+							<input type="text" id="text3" name="text" required/>
+							<br>
+							<br>
+							<br>
+							<label for="picture" class="textoPopupA"> Seleccione imagen: </label>
+							<input type="file" id="picture3" name="picture" accept= "image/*" onchange="cargarImagen3(event)"/>
+							<br>
+							<br>
+								<button type="button" id="myBtn" onclick="añadirGlobo3(this)">Añadir</button>
+								<button type="button" id="myBtn2" onclick="cerrarPopUpA3()">Cancelar</button>
+
+						</span>
+
+				</div>
+
+
+
+			</main>
+
+
+
+
+
+
+
+
+      <footer>
+         <div class="fin">
+           <ul>
+             <li><a href="">Ayuda</a></li>
+             <li><a class="barritas" href="">Contacto</a></li>
+             <li><a href="">Política de Privacidad</a></li>
+           </ul>
+        </div>
+
+      </footer>
+
+
+    </body>
+
+
+    </html>
