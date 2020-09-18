@@ -1,0 +1,846 @@
+/*EL html debe ocupar la totalidad, se establecerá el color*/
+html {
+    height:100%;
+	width:100%;
+	background-color:#283655;
+}
+/*El cuerpo de la estructura ocupará un poco menos que el total de la página*/
+body {
+    height: 100%;
+	width:100%;
+	margin:0%;
+}
+/*Para poder acceder a un tipo de letra externo se exporta al stylesheet un nuevo 
+tipo de fuente proveniente de un link de google, a esa nueva tipografía se la denominará Manjari,
+el nombre que se le da, "manajri", será el nombre al que se accederá en los distintos textos*/
+.manjari { 
+	font-family: "Manjari", sans-serif;
+}
+/*El header tendrá un margen con respecto a la página total, con un borde visible y en negro,
+este actuará como bloque, y se repartirán los elementos que haya en el de forma ordenada. El
+texto se alineará al centro*/
+header {
+	margin: 1%;
+    border-style: solid;
+	border-color: black;
+	overflow:hidden;
+	display:block;
+	text-align: center;
+	background-color:#4D648D;
+	font-size: 230%;
+}
+/*El porcentaje de ocupación de la imagen dentro del espacio reservado para ella*/
+#img-titulo img {
+	width:100%;
+	height:100%;
+}
+/*Las características del espacio reservado para la imagen del logo, que será de un ancho de 17%, 
+teniendo márgen y estando a la derecha de la página*/
+#img-titulo{
+	width: 17%;
+	border: 0%;
+	padding: 0%;
+	margin:2.45%;
+	float: left;
+	overflow:auto;
+}
+/*El espacio que podrá ocupar el texto dellogo de la empresa, así como las características del texto que en el se encuentra*/
+.titulo{
+	width: 35%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+	padding:0%;
+	border:0%;
+    float: left;
+    font-weight: bold;
+	overflow: auto;
+	letter-spacing: 3px;
+	font-size: 250%;
+}
+/*Las características del apartado que forma la navegación dentro del header, las características del texto inroducido y 
+su disposición en el espacio reservado para ellas*/
+.opciones-header {
+	width: 33%;
+	margin: 3%;
+	margin-top:6%;
+	margin-bottom:6%;
+	padding:0%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	font-size: 140%;
+    border-style: solid;
+	border-color: black;
+	float: right;
+	overflow:auto;
+	text-align: center;
+	background-color: rgb(174, 192, 219);
+}
+/*Cuando un link que se muestra en la página no ha sido previamente visitado*/
+a:link {
+	color: black;
+}
+/*Cuando el link que se muestra en la página ya ha sido visitado aparecerá de un color distinto*/
+a:visited {
+	color:  rgb(67, 89, 128);
+}
+/*Cuando hay un link en la ´página, no aparecerá con subrayado*/
+a{
+	text-decoration: none;
+}
+/*Se escogerán como letras para esta barra de navegación las que ofrece h3, sin embargo, se modificarán
+incrementado el interespaciado entre letras*/
+h3{
+	display:inline;
+	margin:2%;
+	letter-spacing: 3px;
+	overflow: auto;
+}
+/*Lo que se encuentre en el main, se dispondrá centrado en la pantalla*/
+main {
+	text-align: center;
+}
+/*La primera columna tendrá un alto variable que dependerá de la cantidad de cajas que se encuentren dentro de esta pero,
+su ancho será repartido equitativamente junto con las otras dos columnas. Se establecerá un margen a la izquierda para estar más
+centrado. Asimismo, se esttablece la disposición que se querrá de los objetos de dentro y su forma física visual en la pantalla.
+Se alineará con lo que se encuentra en la región superior*/
+#columna1 {
+	width: 100%;
+	margin:0%;
+	padding: 0%;
+	padding-bottom: 15px;
+    border-style: solid;
+	border-color: black;
+	overflow: auto;
+	display:inline-block;
+	vertical-align: top;
+	background-color: #4D648D;
+}
+/*La primera columna tendrá un alto variable que dependerá de la cantidad de cajas que se encuentren dentro de esta pero,
+su ancho será repartido equitativamente junto con las otras dos columnas. Se establecerá un margen a la izquierda y a la derecha
+para separase de las otras columnas. Asimismo, se esttablece la disposición que se querrá de los objetos de dentro y su forma 
+física visual en la pantalla.Se alineará con lo que se encuentra en la región superior*/
+#columna2 {
+    width: 100%;
+	margin:0%;
+	padding: 0%;
+	padding-bottom: 15px;
+    border-style: solid;
+	border-color: black;
+	overflow: auto;
+	display:inline-block;
+	vertical-align: top;
+	background-color: #4D648D;
+}
+/*La primera columna tendrá un alto variable que dependerá de la cantidad de cajas que se encuentren dentro de esta pero,
+su ancho será repartido equitativamente junto con las otras dos columnas. Se establecerá un margen a la derecha para estar más
+centrado. Asimismo, se esttablece la disposición que se querrá de los objetos de dentro y su forma física visual en la pantalla.
+Se alineará con lo que se encuentra en la región superior*/
+#columna3 {
+    width: 100%;
+	margin:0%;
+	padding: 0%;
+	padding-bottom: 15px;
+    border-style: solid;
+	border-color: black;
+	overflow: auto;
+	display:inline-block;
+	vertical-align: top;
+	background-color: #4D648D;
+}
+/*A la cabecera de cada columna irán una serie de elementos, como son el nombre de la columna y la imagen de tipo bocata, para ello
+se establecerán las dimensiones de esta*/
+.cabecera {
+	width: 99%;
+	border:0%;
+	padding:0%;
+	margin:0%;
+	height: 10%;
+}
+/*Se establecen las dimensione de lo que será el título de la columna, y las características de las letras que se encuentran en 
+dicho nombre*/
+.nom-col {
+	margin-left: 8%;
+	margin-top: 2.5%;
+	padding: 0%;
+	border:0%;
+	width: 30%;
+	font-weight: bolder;
+	font-size: 230%;
+	float: left;
+}
+/*La imagen de tipo bocata se establecerá a la izquierdda de la cabecera de la columna, para ello se establecen sus dimensiones*/
+.img-bocata img {
+	margin:10px;
+	border:0%;
+	padding:0%;
+	width: 7%;
+	height:6%;
+	float: right;
+}
+/*La imagen de tipo bocata variará en tamaño cuando el cursor pase por encima*/
+.img-bocata img:hover {
+	-ms-transform: scale(1.3); /* IE 9 */
+  	-webkit-transform: scale(1.3); /* Safari 3-8 */
+  	transform: scale(1.3);
+}
+/*Dentro de cada una de las columnas se hayan una serie de productos que se recomiendan. Para cada celda de producto se establecerán unas
+características para darle tamaño y forma, asi como establecer la organnzación de los elementos que albergará en su interior. Cada uno
+de estos productos irá solo en la fila de la columna y se tratrán como bloques*/
+.producto{
+	margin:8px;
+	padding: 0%;
+	margin-bottom:5px;
+    border-style: solid;
+	border-color: black;
+	clear:both;
+	overflow: auto;
+	display: block;
+	background-color: rgb(174, 192, 219);
+}
+/*Se establecen las dimensiones para la imagen de cada móvil que se muestra*/
+.moviles{
+	width:18%;
+	height:50%;
+	border:0%;
+	padding:0%;
+	margin:1%;
+	float:left;
+}
+/*Características que tendrán los caracteres que hagan referencia al teléfono que se muestra en el aquella caja. Estos se mostrarán
+a la derecha de la foto y sin tener maás objetos a la izquierda. Además, si ocupa más de 3 palabras se dividirá en dos líneas.*/
+.tipo-movil{
+	width: 45%;
+	height: 5%;
+	border:0%;
+	padding:0%;
+	margin:0%;
+	margin-top: 10%;
+	margin-left: 5%;
+	float:left;
+	font-size: 130%;
+}
+/*En cada producto se encuentra una imagen con una x, para permitir borrar la referencia*/
+.img-exit img{
+    height: auto;
+	width: 100%;
+	display: block;
+}
+/*La imagen de salida si pasa el cursor sobre ella cmabiará a otra*/
+.img-exit:hover .overlay{
+	opacity:1;	
+}
+/*El espacio reservado a la imagen de salida que se encuentra en cada una de las cajas de producto deberá tener unas características
+asociadas que permiten situarla en la esquina superior izquierda*/
+.img-exit{
+	position: relative;
+	width: 5%;
+	float: right;
+	border:0%;
+	padding:0%;
+	margin:0%;
+}
+/*Los párrafos se muestran en línea*/
+p{
+	margin:0%;
+	border:0%;
+	padding:0%;
+	float: left;
+}
+/*En la parte inferior de cada caja de producto se encuentra una caja de acciones que consiste en las posibles reacciones y en la fecha 
+Esta caja tendrá unas dimensiones.*/
+.acciones{
+	width:96%;
+	border:0%;
+	padding:0%;
+	padding-bottom:5%;
+	margin:0%;
+	padding-left: 3%;
+	overflow:auto;
+}
+/*Cada par de imagen de reacción y el tooltip utilizado para mostrarla se incluirán dentro de un div, que tendrá las medidas
+que se indican.*/
+.accion-tool{
+	width:18%;
+	border:0%;
+	float: left;
+	padding:0%;
+	margin: 0%;
+}
+/*En cada caja acción se encuentra la zona reservada para un icono de acción con unas características de tamaño y posición a ocupar*/
+.accion{
+	height: 44%;
+	width: 44%;
+	border:0%;
+	float: left;
+	padding:0%;
+	margin: 7%;
+}
+/*Cada acción se animará de tal forma que cuando el cursor pase sobre ella esta incrementará d etamaño*/
+.accion:hover {
+	-ms-transform: scale(1.3); /* IE 9 */
+  	-webkit-transform: scale(1.3); /* Safari 3-8 */
+  	transform: scale(1.3);
+}
+/*La fecha que se incluye dentro de las acciones tendrá unas dimensiones, asi como unas características sobre la tipografía*/
+.fecha{
+	width: 41%;
+	border:0%;
+	padding:0%;
+	margin:2.5%;
+	float:left;
+	font-size: 150%;
+} 
+/*Debe existir una opción para adicionar mas cajas de productos, la imagen cambiará con un hover. Ira debajo del último producto de
+cada columna*/
+
+.img-addproduct img{
+	width: 100%;
+	display: block;
+}
+/*La imagen de salida si pasa el cursor sobre ella cmabiará a otra*/
+.img-addproduct:hover .overlay{
+	opacity:1;	
+}
+/*El espacio reservado a la imagen de salida que se encuentra en cada una de las cajas de producto deberá tener unas características
+asociadas que permiten situarla en la esquina superior izquierda*/
+.img-addproduct{
+	position: relative;
+	width: 10%;
+	height: 10%;
+	border:0%;
+	padding:0%;
+	margin:3%;
+	margin-left: 45%;
+	margin-right: 45%;
+	clear: both;
+}
+/*El footer ocupará casi todo el ancho de la página, pero será corto. Además tiene otras características en cuanto al diseño que
+se mostraá por pantalla y sobre como se alinearán los objetos en su interior*/
+footer{
+	width: 96%;
+	margin: 1%;
+	padding: 0%;
+	margin-top: 5%;
+    border-style: solid;
+	border-color: black;
+	border: 0,5%;
+	clear:both;
+	overflow: auto;
+	background-color: #4D648D;
+}
+/*La barra de navegación que se encuentra dentro del footer tiene unas características en cuanto a forma, como su tamaño, la localización
+de la información dentro de ella, asi como la apariencia de los caracteres en ella*/
+.opciones-footer {
+	padding: 0%;
+	margin: 5%;
+	padding-left:8.5%;
+	margin-left:25%;
+	margin-right:25%;
+	font-weight: bolder;
+	font-size: 330%;
+    border-style: solid;
+	border-color: black;
+	overflow:auto;
+	background-color: rgb(174, 192, 219);
+}
+.img-footer{
+	width: 17%;
+	border:0%;
+	float: left;
+	padding:2%;
+	padding-left:4%;
+	padding-right: 4%;
+	margin:0%;
+	text-align: center;
+	vertical-align: center;
+}
+.img-footer img{
+	width:80%;
+}
+
+/*Bases necesarias para el div tooltip*/
+.tooltip {
+	position: relative;
+	display:inline-block;
+  }
+
+  /*Características que tiene el texto que se encuentra en el tooltip, así como su forma y posición al mostrarse por pantalla
+  y su prioridad con relación al resto de elementos*/
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 100%;
+	background-color: rgb(98, 110, 133);
+	color: black;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	top: 100%;
+	left: 15%;
+	margin-left: 15%;
+	
+	/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+	opacity: 0;
+	transition: opacity 1s;
+  }
+  /*El tooltip tendrá una animación de desvancerse al aparecer por pantalla*/
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+/*Necesaria para poder sobreponer una imagen a la imagen de salida*/
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: .3s ease;
+}
+
+/*
+*
+* POP UP
+*
+*/
+/*Caracteristicas del Pop Up*/
+/* Popup container */
+.popup {
+	cursor: pointer;
+	display:block;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+	user-select: none;
+	float: left;
+	width: 70%;
+  }
+  
+/* The actual popup (appears on top) */
+.popup .popuptext {
+	width: 70%;
+	display:none;
+	background-color: #808fb4;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	left:15%;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+/* Añadimos animación al pop up, aparecerse */
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;} 
+	to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+}
+
+/*Caracteristicas del interior del Pop Up*/
+/*El body ocupará menos que el html*/
+bodyPop{
+        height:600%;
+        width:600%;  
+}
+/*Parte superior donde se encuentra la imagen de salida, tiene un margen respecto a la parte superior
+ocupa todo el ancho y tiene una altura de 2%*/
+headerPop{
+	margin-top: 2%;
+	width: 100%;
+	height: 2%;
+}
+/* Engloba tanto la imagen como la descripcion*/
+.imgtext{
+	width: 98%;
+	float: left;
+}
+/* Tamaño de la imagen principal*/
+.imgprincipal{
+	width: 80%;	
+}
+/* Engloba la imagen e indica que tiene que estar a la izquierda para poder ajustarlo con el texto*/
+.phone{
+	width: 20%;
+	float: left;
+}
+/* Engloba la descripcion del producto, tiene un tamaño y un tipo de letra, separacion entre las letras
+y se indica que es inline-block para que este a la derecha alineado con la imagen*/
+.contenido{
+	width: 75%;
+	height: 30%;
+	padding: 0.5%;
+	border:0%;
+	font-size: 127%;
+	letter-spacing: 1px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	overflow: hidden;
+	display: inline-block;
+
+}
+/*Debajo de la imagen del producto se encuentra una caja de acciones que consiste en
+ las posibles reacciones y en la fecha 
+Esta caja tendrá unas dimensiones.*/
+.accionesPop {
+	clear: both;
+	border:0%;
+	padding:0%;
+	width: 98%;
+	margin-top: 3%;
+	margin-left: 1.5%;
+	display: inline-block;
+}
+/*En cada caja acción se encuentra la zona reservada para un icono de acción
+ con unas características de tamaño y posición a ocupar*/
+.accionPop {
+	height: 31px;
+	width: 28px;
+	border:0%;
+	float: left;
+	padding:0%;
+	margin: 5px;
+}
+/*Cada acción se animará de tal forma que cuando el cursor pase sobre ella esta incrementará de tamaño*/
+.accionPop:hover {
+	-ms-transform: scale(1.3); 
+  	-webkit-transform: scale(1.3); 
+  	transform: scale(1.3);
+}
+/*Caja donde se encuentra la fecha con unas medidas y caracteristicas*/
+.fechaPop{
+	position: relative;
+	width: 22%;
+	padding:0%;
+	float:right;
+	font-size: 115%;
+	bottom:50px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	
+} 
+/*Caja donde se encuentra el texto debajo de las acciones con una serie de caracteristicas*/
+.eventoPop{
+	width: 40%;
+	float:left;
+	clear:left;
+	padding:0%;
+	margin-left: 1.5%;
+	font-size: 135%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Indicar tamaño y posicion de la imagen de los usuarios*/
+.user img{
+	margin-top: 8%;
+	width: 27%;
+	float:left;
+	clear:left;
+	padding:0%;
+
+}
+/* Caja que engloba tanto la imagen como el texto para que este alineado,
+en este caso son los usuarios que se colocan a la izquierda*/
+.usuarioizq{
+	width: 13.5%;
+	float:left;
+	clear:left;
+	margin-left:2%;
+	padding:0%;
+	
+}
+/* Caja que engloba tanto la imagen como el texto es para que este alineado,
+en este caso son los usuarios que se colocan a la derecha*/
+.usuarioder{
+	width: 13.5%;
+	float:left;
+	padding:0%;
+
+}
+/* Texto para identificar de que usuario se trata, tiene diferentes caracteristicas*/
+.textusers{
+	margin-bottom: 1%;
+	width: 60%;
+	padding:0%;
+	margin-left: 6%;
+	font-size: 125%;
+	display: inline-block;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+} 
+/*Caja que engloba todos los usuarios con sus respectivos textos*/
+.usuariosPop{
+	width:60%;
+	float:left;
+}
+/*Icono para agregar a mas usuarios, este se encuentra a la derecha*/
+.useradd{
+	margin: 0%;
+	border:0%;
+	margin-left: 30%;
+	padding:0%;
+	margin-top:6%;
+	right: 65%;
+}
+.imgadd{
+	width: 7%;
+	height: 7%;
+}
+/*Caja que engloba todo el chat*/
+.chat{
+	width:84%;
+	margin-bottom:3%;
+	margin-left:2%;
+	padding: 0%;
+	float:left;
+	clear:left;
+    border-style: solid;
+	border-color: black;
+	background-color:rgb(174, 192, 219);;
+}
+/*Caja que engloba los comentarios del usuario 1 y 4*/
+.conversacion{
+	padding: 1%;
+	padding-bottom: 8%;
+	width: 95%;
+	float:left;
+	margin:2%;
+	font-size: 127%;
+}
+/*Caja en la cual el usuario escribe su comentario para despues enviarlo*/
+.boxcomment{
+	height: auto;
+	width: 80%;
+	margin:2%;
+	padding: 2%;
+	overflow: auto;
+    border-style: solid;
+	border-color: black;	
+	font-size: 120%;
+	font-style: italic;
+	float: left;
+	background-color: rgb(174, 192, 219);
+	font-family: 'Courier New', Courier, monospace;
+
+}
+/* Caja para la imagen de enviar, esta en la parte inferior del chat*/
+.boxsend{
+	width: 4%;
+	float: left;
+	margin-top: 3.5%;
+	margin-bottom: 3.5%;
+
+}
+/* Tamaño y posicion de la imagen*/
+.send{
+	width: 80%;
+	float: right;
+}
+/*La imagen de enviar se animará de tal forma que cuando el cursor pase sobre ella esta incrementará de tamaño*/
+.send:hover {
+	-ms-transform: scale(1.3); 
+  	-webkit-transform: scale(1.3); 
+  	transform: scale(1.3);
+}
+/* Tamaño y posicion de la imagen exit, esta debe estar arriba a la derecha por eso tiene que ser tipo bloque*/
+.exitPop img{
+    height: auto;
+	width: 100%;
+	display: block;
+}
+/* Caja que engloba la imagen exit indicando top:0 y right:0 para que este en la posicion correcta*/
+.exitPop{
+	position: relative;
+	width: 3%;
+	float: right;
+	border:0%;
+	padding:0%;
+	margin:0%;
+}
+/*La imagen exit se animará de tal forma que cuando el cursor pase sobre ella esta incrementará de tamaño*/
+.exitPop:hover .overlay{
+	opacity:1;		
+}
+/*Bases necesarias para el div tooltip*/
+.tooltipPop {
+	position: relative;
+	display: inline-block;
+  }
+    /*Características que tiene el texto que se encuentra en el tooltip, así como su forma y posición al mostrarse por pantalla
+  y su prioridad con relación al resto de elementos*/
+.tooltipPop .tooltiptextPop {
+	visibility: hidden;
+	width: 120px;
+	background-color: rgb(98, 110, 133);
+	color: black;
+	text-align: center;
+	border-radius: 6px;
+	/* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+	opacity: 0;
+	transition: opacity 1s;
+  }
+  /*El tooltip tendrá una animación de desvancerse al aparecer por pantalla*/
+.tooltipPop:hover .tooltiptextPop {
+	visibility: visible;
+	opacity: 1;
+  }
+.w3-container{
+	  padding:5%;
+	  margin-top:2%;
+	  background-color:#96a6ce;
+	  color: black;
+	  font-size:150%;
+}
+/*Se añaden características del pop up de compartir*/
+.Popcompartir{
+	cursor: pointer;
+	display:block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	clear: both;
+}
+.Popcompartir .PopupCompartir {
+	width: 28%;
+	display:none;
+	background-color: #808fb4;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+/*Se añaden las características de las imagenes que se encuentran en el pop up de compartir */
+.img-compop{
+	width: 10%;
+	display: inline-block;
+	
+}
+.exitComp{
+	height:5%;
+	width: 5%;
+	float: right;
+	position:relative;
+}
+/*Se añaden las caracrterisitas de la imagen de salida del pop up de compartir*/
+.exitComp img{
+	height: auto;
+	width: 100%;
+	display: block;
+	float: right;
+	padding:0%;
+	margin:0%;
+}
+/*Pop Up de adicionar un nuevo producto con sus caracteristicas*/
+.PopAdicionarProducto{
+	cursor: pointer;
+	display:block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	float: left;
+	width: 40%;
+}
+.PopAdicionarProducto .PopupAdicionarProducto{
+	width: 50%;
+	display:none;
+	background-color: #808fb4;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	left:17%;
+	right:17%;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+.nuevoTipoMovil{
+	clear: both;
+	text-align: center;
+	width: 100%;
+	margin: 2%;
+	font-size: 150%;
+}
+.opcionesAdicion{
+	clear: both;
+	margin:2%;
+	margin-top:5%;
+	text-align: center;
+	font-size: 100%;
+}
+.botonesAdicion{
+	font-size: 130%;
+}
+/*Caracteristicas del pop up del bocata que esta en cada columna*/
+.bocata{
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	float: left;
+	width: 20%;
+}
+.bocata .Bocatapop {
+	width: 20%;
+	display:none;
+	font-size:  130%;
+	background-color: #899ac4;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+/*Caracteristicas del la 'x' que aparece en el pop up del bocata*/
+.closebtn{
+	position:relative;
+	float: right;
+}
+li{
+	list-style-type: none;
+}
+ul{
+	padding: 0;
+}
+#sortable { 
+	list-style-type: none; 
+	margin: 1%; 
+	padding: 0; 
+	width: 98%;
+	height: auto;
+	text-align: center;
+	align-content: center;
+}
+#sortable li { 
+	margin: 2.15%; 
+	float: left; 
+	width:29%; 
+	text-align: center; 
+}
+
+#sortableC1, #sortableC2, #sortableC3{
+	width: 100%;
+	padding: 1%;
+    list-style-type: none;
+    margin: 0;
+	float: left;
+	text-align: center;
+  }
+
+#sortableC1 li, #sortableC2 li, #sortableC3 li {
+	margin: 0%;
+    width: 100%;
+}
+  
+
+
+

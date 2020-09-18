@@ -1,0 +1,1062 @@
+<!DOCTYPE html> <!-- indica html5-->
+    <html> <!-- etiqueta que engloba html-->
+        <head> <!-- se van a introdcuir los metadatos: titulo, scripts,  hoja de estilo-->
+            <!--Se introduce en el meta la configuración necesaria para que la pagina web se
+            escale correctamente en los distintos dispositivos-->
+            <meta charset="utf-8" name= "viewport" content="width=device-width, initial-scale=1.0">
+            <link rel ="stylesheet" href="style/estilo.css"/>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <link rel="stylesheet" href="/resources/demos/style.css">
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <!--Para poder acceder a un tipo de letra externo se exporta al stylesheet un nuevo 
+            tipo de fuente proveniente de un link de google, a esa nueva tipografía se la denominará Manjari,
+            el nombre que se le da, "manajri", será el nombre al que se accederá en los distintos textos-->
+            <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+        </head> 
+        <body>
+            <script src = "script/javascript.js">
+            </script>
+            <!--En el header se encuentra la imagen de logo, el nombre de la página y una serie de accesos de
+            navegación que se consideran relevantes para la web-->
+            <header>
+                <div id = "img-titulo"> <img src="images/telephone.png"/> </div> 
+                <div class = "titulo"> <p class=manjari>It´s calling you...</p></div>
+                <nav>
+                    <!--Dentro de estas opciones se encuentran un acceso directo a la página principal, 
+                    una serie de links para poder comprar los móviles que se disponen en la página-->
+                    <div class = "opciones-header"> 
+                        <a href="index.html"><h3 class=manjari>HOME</h3></a>
+                        <a href="https://www.amazon.com"><h3 class=manjari>AMAZON</h3></a>
+                        <a href="https://www.fnac.es"><h3  class=manjari>FNAC</h3></a>
+                        <a href="https://es.aliexpress.com"><h3 class=manjari>ALIEXPRESS</h3></a>
+                    </div>
+                </nav>
+            </header>
+            <main id= "main">
+                <!--En el main se encuentran las 3 columnas divisiorias. Cada una de estas columnas corresponderá
+                a una marca diferente de teléfonos móviles-->
+                <ul id="sortable">
+                    <li class="ui-state-default">
+                    <div id = "columna1" > 
+                    <!--En esta primera columna se encuentran los móviles de Apple-->
+                    <!--En la cabecera se incluye el nombre de la marca a la que hace referencia y la imagen 
+                    de tipo bocate que aumentará en tamaño cuando se pase el cursor por encima-->
+                    <div class = "cabecera"> 
+                        <div class = "nom-col"> <p class=manjari>Apple</p> </div>
+                        <div class = "img-bocata"> <img src="images/bocata.png" onclick="myFunctionOpen('myNav1')"/> </div>
+                    </div>
+                     <!--Popup al pulsar el boton bocadillo de cada una de las columnas-->
+                    <div class= "bocata">
+                        <span id="myNav1" class="Bocatapop">
+                            <a href="javascript:void(0)" class="closebtn" onclick="myFunctionClose('myNav1')">&times;</a>
+                                <div id= "archivarlist1" onclick="Modelbox('alertBocata1')" class= "manjari">Archivar esta lista  </div>
+                                <div id ="cambiarnom1" class= "manjari">Cambiar nombre</div>
+                                <div id ="ajustes1" class="manjari">Ajustes</div>
+                                <div id ="contacto1" class= "manjari">Contacto</div>   
+                        </span>    
+                    </div>
+                    <!--Al dar a archivar lista aparecerá una alerta para comprobar si quiere archivar la lista o no, al dar a cancelar ira a la funcion correspondiente y se quedará tal cual, al dar a aceptar irá a la función y la lista será archivada-->
+                    <div id = "alertBocata1" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                            <div id ="textmodelBocata1" class="w3-container">
+                                <p class ="manjari">¿Desea archivar toda la lista?</p>
+                                <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alertBocata1')">Cancelar</button>
+                                <button class="w3-button w3-right w3-white w3-border" onclick="ArchivarLista('columna1', 'alertBocata1')">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="sortableC1" class="connectedSortable"> 
+                    <li class="ui-state-default">
+                    <!--En la parte inferior de cada columna se encuentran los productos de la marca de esa columna-->
+                    <div class = "producto" id = "Boxiphone">  
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/iphone11.png" />
+                        <div class="popup">
+                            <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup1C1', '1', 'Primer sistema de tres cámaras que combina lo último en tecnología con la legendaria simplicidad del iPhone. Un campo de visión hasta cuatro veces más amplio. Pantalla de <b>5,8 pulgadas</b> con una resolución que se mueve en torno al <b>FullHD+</b>. Imágenes impactantes sin apenas luz. El iPhone 11 te permite grabar vídeos en <b>4K a 60 f/s</b> supernítidos con cualquiera de sus cámaras y edición de vídeo con las mismas herramientas que se utilizan en las fotos. Resistencia del agua de hasta 4 metros. Reconocimiento facial seguro. Contiene el chip más rápido que haya tenido un smart­phone. Una batería que dura todo el día, para que hagas más y cargues menos.<br>. Este modelo tiene diferentes tonalidades: <b>Verde Noche, Gris Espacial, Plata y Oro.</b> <br> <br> <b>Desventajas:</b> Las funciones de su triple cámara no son suficientes para el precio elevado del teléfono; no tiene carga reversible o puerto para audífonos. El almacenamiento inicial es poco en comparación a lo que ofrece la competencia.<br><b>Conclusiones:</b> El iPhone 11 Pro es un celular un tanto caro que incorpora tecnologías nuevas para Apple pero que ya otras marcas incorporan desde hace uno o dos años.')"> 
+                                 <p class=manjari> Iphone11 Pro 128GB</p>
+                            </div>
+                            <span class="popuptext" id="myPopup1C1">
+                            </span>
+                        </div>
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+
+                        <div class = "img-exit" onclick="Modelbox('alert1C1')">
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert1C1" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel1C1"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert1C1')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('Boxiphone', 'alert1C1')">Aceptar</button>
+                                    </div>
+                            </div>
+                        </div>
+                                  
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like1C1" src="images/like.png" onclick="Like('like1C1')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir1C1')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari>18/09/2019 19:48</p></div>
+                             <!--Div para poder compartir el evento en redes sociales-->
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir1C1">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir1C1')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Iphone11 Pro 128GB en:</p>
+                                    
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto2C1"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/iphone11n.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup2C1', '1', ' <b>iPhone 11</b> cuenta con un chasis de aluminio de la serie 7000 y una carcasa de cristal que cubre tanto la parte trasera como la frontal. Se vende en colores Blanco, Negro, Coral, Rojo, Amarillo y Azul. La pantalla Liquid Retina del iPhone 11 tiene un tamaño de <b>6.1 pulgadas</b>, con una resolución de 1792 x 828 píxeles, con tecnología IPS LCD. Estrena la nueva versión del sistema operativo <b>iOS 13</b>.También estrena el nuevo procesador <b>A13 Bionic</b>, un 30% más rápido que la versión anterior. Apple asegura que posee la CPU y GPU más rápidas del mercado.<br>Posee dos cámaras traseras. El sensor principal es de 12 MP y 26 mm, con una apertura f/1.8, un tamaño de píxel de 1.4 micras, Autofoco y OIS. Con Quad-LED Dual tone Flash. Graba vídeo a 4K y 60 fps.El sensor secundario es un gran angular de 12 MP y 13 mm, con una apertura f/2.4.La cámara frontal alcanza los 12 MP, y tiene un sensor de profundidad. Estrena un nuevo tipo de selfies a cámara lenta, Slofies.')">
+                                <p class=manjari> Iphone11 128GB </p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup2C1">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert2C1')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert2C1" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel2C1"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert2C1')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto2C1', 'alert2C1')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like2C1" src="images/like.png" onclick="Like('like2C1')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir2C1')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir2C1">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir2C1')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Iphone11 128GB en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto3C1"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/iphonexsmax.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup3C1', '1', '<b>iPhone XS Max</b> es el móvil de gama top de Apple de 2018 y llega al mercado con una pantalla OLED panorámica con notch y es el móvil para usuarios que querían tneer un iPhone X con mayor tamaño. Tiene un diseño de grandes dimensiones así como su pantalla de 6,5 pulgadas, muy similar a su predecesor pero llega con mayor tamaño. Contiene una pantalla de <b>6,5 pulgadas</b> con resolución 2.468x1.242px. Trabaja de serie sobre iOS 12 y Apple va a ir actualizándolo durante los próximos años. Trae mejoras frente a iOS 11 en cuestión de velocidad de carga de aplicaciones y rendimiento 3D. <br>Trabaja sobre el procesador Apple <b>A12 Bionic y 3 GB de memoria RAM</b>. Es un procesador muy potente con una GPU personalizada. La cámara principal del iPhone XS Max tiene un pack de doble sensor de 12 Mpx perfecto para modo retrato ya que uno de los objetivos es telefoto 2X. Cuenta además con Flash True Tone con cuatro LED.')">
+                                <p class=manjari> IphoneXs Max 128GB </p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup3C1">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo,al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert3C1')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert3C1" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel3C1"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert3C1')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto3C1', 'alert3C1')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like3C1" src="images/like.png" onclick="Like('like3C1')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir3C1')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir3C1">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir3C1')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento IphoneXs Max 128GB en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto4C1">  
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/iphonexs.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup4C1', '1', '<b>iPhone XS</b> es el móvil de gama top de Apple de 2018 y llega al mercado con una pantalla OLED panorámica con notch y es el verdadero sucesor del iPhone X. Contiene una pantalla de <b>5,8 pulgadas</b> con resolución 2.436x1.125px.Trabaja de serie sobre iOS 12 y Apple va a ir actualizándolo durante los próximos años. Además trabaja sobre el procesador Apple <b>A12 Bionic</b> y 3 GB de memoria RAM.<br> Es un procesador muy potente con una GPU personalizada de Apple que rinde notablemente más que el iPhone X del año pasado. La cámara principal del iPhone XS tiene un pack de doble sensor de 12 Mpx perfecto para modo retrato ya que uno de los objetivos es telefoto 2X. Cuenta además con Flash True Tone con cuatro LED.')">
+                                <p class=manjari> IphoneXs 128GB </p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup4C1">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert4C1')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert4C1" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel4C1"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert4C1')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto4C1', 'alert4C1')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like4C1" src="images/like.png" onclick="Like('like4C1')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir4C1')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir4C1">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir4C1')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento IphoneXs 128GB en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto5C1"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil--> 
+                        <img class = "moviles" src="images/iphonexr.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup5C1', '1', '<b>iPhone XR</b> es el móvil de gama top de Apple de 2018 y llega al mercado con una pantalla LCD panorámica con notch y es el móvil para usuarios que querían tener la evolución del iPhone 8 Plus. Contiene una pantalla de <b>6,1 pulgadas</b> con resolución 1792x828px. Trabaja de serie sobre <b>iOS 12</b> y Apple va a ir actualizándolo durante los próximos años. Trae mejoras frente a iOS 11 en cuestión de velocidad de carga de aplicaciones y rendimiento 3D. Usa el procesador <b>Apple A12 Bionic</b>, uno de los más potentes del mercado y tiene 3 GB de memoria RAM. Es un procesador muy potente con una GPU personalizada de Apple que rinde notablemente más que el iPhone 8 Plus del año pasado. La cámara principal del iPhone Xr tiene un sensor de 12 Mpx con apertura f/1.8. ')">
+                                <p class=manjari> IphoneXr 128GB </p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup5C1">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto--> <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert5C1')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert5C1" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel5C1"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert5C1')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto5C1', 'alert5C1')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like5C1" src="images/like.png" onclick="Like('like5C1')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir5C1')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir5C1">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir5C1')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento IphoneXr 128GB en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    </ul>
+                    <div class = "img-addproduct" onclick= "myFunctionOpen('AdicionesProducto1')"> 
+                        <img src= "images/plus.png"/>
+                        <div class="overlay">
+                            <img src="images/plus2.png"/>
+                        </div>
+                    </div> 
+                    <div class = "PopAdicionarProducto">
+                        <span class = "PopupAdicionarProducto" id = "AdicionesProducto1">
+                            <div class= "nuevoTipoMovil">
+                                <p>
+                                    Introduce el nombre de un nuevo producto:
+                                    <input  id="adicionMovil1" onfocus="this.value=''"required type="text" maxlength = "20"/>
+                                </p>
+                                <br>
+                                <br>
+                                <p>
+                                    Seleccione una nueva foto:    
+                                    <label  for= "picture" class="labelMovil"></label>
+                                    <input  id="adicionImagen1" onfocus="this.value=''" type="file" name="nuevaImagenMovil"/>
+                                </p>
+                                <br>
+                                <br>
+                                <p>
+                                    Introduce un texto de descripción del nuevo evento:
+                                    <input  id="adicionMovilTexto1" required type="text" />
+                                </p>
+                            </div>
+                            <div class= "opcionesAdicion">
+                                <button class = "botonesAdicion" onclick="myFunctionClose('AdicionesProducto1')"> 
+                                    Cancelar
+                                </button>
+                                <button class = "botonesAdicion" onclick="CloseAddProduct('1','AdicionesProducto1', 'adicionMovil1', 'adicionImagen1', 'adicionMovilTexto1')"> 
+                                    Aceptar
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                </div> 
+                </li>
+                <!--En el main se encuentran las 3 columnas divisiorias. Cada una de estas columnas corresponderá
+                a una marca diferente de teléfonos móviles-->
+                <li class="ui-state-default">
+                <div id = "columna2">  
+                    <!--En esta primera columna se encuentran los móviles de Apple-->
+                    <!--En la cabecera se incluye el nombre de la marca a la que hace referencia y la imagen 
+                    de tipo bocate que aumentará en tamaño cuando se pase el cursor por encima-->
+                    <div class = "cabecera"> 
+                        <div class = "nom-col"> <p class=manjari>Xiaomi</p> </div>
+                        <div class = "img-bocata"> <img src="images/bocata.png" onclick="myFunctionOpen('myNav2')"/> </div>
+                    </div>
+                    <!--Popup al pulsar el boton bocadillo de cada una de las columnas.Al dar a "archivar lista" se irá a la función y desaparecerá esta columna-->
+                    <div class= "bocata">
+                        <span id="myNav2" class="Bocatapop">
+                            <a href="javascript:void(0)" class="closebtn" onclick="myFunctionClose('myNav2')">&times;</a>
+                                <div id= "archivarlist2" onclick="Modelbox('alertBocata2')" class= "manjari">Archivar esta lista  </div>
+                                <div id ="cambiarnom2" class= "manjari">Cambiar nombre</div>
+                                <div id ="ajustes2" class="manjari">Ajustes</div>
+                                <div id ="contacto2" class= "manjari">Contacto</div>   
+                        </span>    
+                    </div>
+                    <div id = "alertBocata2" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                            <div id ="textmodelBocata2" class="w3-container">
+                                <p class ="manjari">¿Desea archivar toda la lista?</p>
+                                <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alertBocata2')">Cancelar</button>
+                                <button class="w3-button w3-right w3-white w3-border" onclick="ArchivarLista('columna2', 'alertBocata2')">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="sortableC2" class="connectedSortable"> 
+                    <li class="ui-state-default">
+                    <!--En la parte inferior de cada columna se encuentran los productos de la marca de esa columna-->
+                    <div class = "producto" id = "producto1C2"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/mi9.png"/> 
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup1C2', '2', '<b>Xiaomi Mi9</b> es la apuesta de gama top de Xiaomi del año 2019. Se trata de un modelo potente que llega con un diseño cuidado, con gran pantalla y muy compacto con un grosor de solo 7,6 mm. La pantalla del Xiaomi Mi9 tiene un tamaño de <b>6,4 pulgadas</b>.A nivel de software Xiaomi ha elegido para este movil el sistema operativo <b>Android en su versión 9.0</b>.<br> El procesador del Xiaomi Mi9 es un Qualcomm Snapdragon 855, el más potente del mercado actualmente. En cuanto a memorias, cuenta con 6, 8 y 12 GB GB de RAM y unos 128 o 256 GB de memoria interna. En la parte trasera contamos con una triple cámara trasera con una lente principal de 48 megapíxeles con un tamaño de sensor de 1/2.La cámara frontal tiene una resolución de 20 Mpx. La batería del Mi9 tiene una <b>capacidad de 3.500 mAh</b>, lo que tiene una relación directa sobre su automía. Cuenta con NFC.')">
+                                <p class=manjari> Xiaomi Mi9</p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup1C2">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert1C2')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert1C2" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel1C2"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert1C2')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto1C2', 'alert1C2')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like1C2" src="images/like.png" onclick="Like('like1C2')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir1C2')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir1C2">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir1C2')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Xiaomi Mi9 en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto2C2"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/redmi.png"/> 
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup2C2', '2', 'El <b>Xiaomi Redmi Note 7</b> cuenta con unas dimensiones de 159,2 milímetros de alto, 75,2 mm de ancho y 8,1 mm de grosor. En la parte trasera destaca el lector de huellas dactilares. Pantalla con un tamaño de <b>6,3 pulgadas.</b>.El sistema operativo del Redmi Note 7 es Android, concretamente su <b>versión 9.0. o Android Pie.</b><br>En cuanto al interior de este smartphone, el procesador del Xiaomi Redmi Note 7 es un Snapdragon 660 Ese SoC que cuenta con dos CPU que trabajan con la siguiente arquitectura: Cortex A73 con 4 núcleos a 2.2 GHz de velocidad, Cortex A53 con 4 núcleos a 1.8 GHz de velocidad. A nivel de hardware, del Redmi Note 7 también tenemos que hablar de su tarjeta gráfica (GPU). La capacidad de la batería del Redmi Note 7 es de <b>4000 mAh.</b> ')">
+                                <p class=manjari> Xiaomi Redmi Note 7</p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup2C2">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto--><!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert2C2')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert2C2" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel2C2"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert2C2')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto2C2', 'alert2C2')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like2C2" src="images/like.png" onclick="Like('like2C2')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir2C2')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir2C2">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir2C2')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Redmi Note 7 en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    </ul>
+                    <div class = "img-addproduct" onclick= "myFunctionOpen('AdicionesProducto2')"> 
+                        <img src= "images/plus.png"/>
+                        <div class="overlay">
+                            <img src="images/plus2.png"/>
+                        </div>
+                    </div> 
+                    <div class = "PopAdicionarProducto">
+                        <span class = "PopupAdicionarProducto" id = "AdicionesProducto2">
+                            <div class= "nuevoTipoMovil">
+                                <p>
+                                    Introduce el nombre de un nuevo producto:
+                                    <input id="adicionMovil2" type="text" name="datos" maxlength= "20" required>
+                                </p>
+                                <br>
+                                <br>
+                                <p>
+                                    Seleccione una nueva foto:    
+                                    <label  for= "picture" class="labelMovil"></label>
+                                    <input  id="adicionImagen2" type="file" name="nuevaImagenMovil"/>
+                                </p>
+                                <br>
+                                <br>
+                                <p>
+                                    Introduce un texto de descripción del nuevo evento:
+                                    <input  id="adicionMovilTexto2" required type="text" />
+                                </p>
+                            </div>
+                            <div class= "opcionesAdicion">
+                                <button class = "botonesAdicion" onclick="myFunctionClose('AdicionesProducto2')"> 
+                                    Cancelar
+                                </button>
+                                <button class = "botonesAdicion" onclick="CloseAddProduct('2','AdicionesProducto2', 'adicionMovil2', 'adicionImagen2', 'adicionMovilTexto2')"> 
+                                    Aceptar
+                                </button>
+                            </div>
+                        </span>
+                    </div> 
+                </div>
+                </li>
+                <!--En el main se encuentran las 3 columnas divisiorias. Cada una de estas columnas corresponderá
+                a una marca diferente de teléfonos móviles-->
+                <li class="ui-state-default">
+                <div id = "columna3">  
+                    <!--En esta primera columna se encuentran los móviles de Apple-->
+                    <!--En la cabecera se incluye el nombre de la marca a la que hace referencia y la imagen 
+                    de tipo bocate que aumentará en tamaño cuando se pase el cursor por encima-->
+                    <div class = "cabecera"> 
+                        <div class = "nom-col"> <p class=manjari>Samsung</p> </div>
+                        <div class = "img-bocata"> <img src="images/bocata.png" onclick="myFunctionOpen('myNav3')"/> </div>
+                    </div>
+                    <!--Popup al pulsar el boton bocadillo de cada una de las columnas.Al dar a "archivar lista" se irá a la función y desaparecerá esta columna-->
+                    <div class= "bocata">
+                        <span id="myNav3" class="Bocatapop">
+                            <a href="javascript:void(0)" class="closebtn" onclick="myFunctionClose('myNav3')">&times;</a>
+                                <div id= "archivarlist3" onclick="Modelbox('alertBocata3')" class= "manjari">Archivar esta lista  </div>
+                                <div id ="cambiarnom3" class= "manjari">Cambiar nombre</div>
+                                <div id ="ajustes3" class="manjari">Ajustes</div>
+                                <div id ="contacto3" class= "manjari">Contacto</div>   
+                        </span>    
+                    </div>
+                    <div id = "alertBocata3" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                            <div id ="textmodelBocata3" class="w3-container">
+                                <p class ="manjari">¿Desea archivar toda la lista?</p>
+                                <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alertBocata3')">Cancelar</button>
+                                <button class="w3-button w3-right w3-white w3-border" onclick="ArchivarLista('columna3', 'alertBocata3')">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="sortableC3" class="connectedSortable"> 
+                    <li class="ui-state-default">
+                    <!--En la parte inferior de cada columna se encuentran los productos de la marca de esa columna-->
+                    <div class = "producto" id = "producto1C3"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/s10.png"/> 
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup1C3', '3', '<b>Samsung Galaxy S10</b>alberga una pantalla Dynamic AMOLED con un único orificio en la parte superior derecha para la cámara frontal. La parte trasera es de cristal y cuenta con un módulo de tres cámaras y flash LED. Contiene <b>6,1 pulgadas</b> y la densidad de píxeles es de 550 píxeles por pulgada. Cuenta con <b>Android 9.0 Pie</b>, además de la interfaz One UI de Samsung que permite controlar el móvil de forma más sencilla.<br> Al procesador, de 8 núcleos con dos de alta potencia, dos de menor consumo y cuatro para las tareas menos pesadas, se le suman 8 GB de Memoria RAM. La GPU es la Mali-G76 MP12. Cuenta con triple cámara. En la parte frontal nos encontramos la cámara Dua Pixel de 10 megapixeles con apertura f/1.9. La batería del Galaxy S10etiene una capacidad de <b>3.400 mAh.</b>')">
+                                <p class=manjari> Samsung Galaxy S10</p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup1C3">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert1C3')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert1C3" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel1C3"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert1C3')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto1C3', 'alert1C3')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like1C3" src="images/like.png" onclick="Like('like1C3')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir1C3')">
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir1C3">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir1C3')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Samsung Galaxy S10 en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto2C3"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/a70.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup2C3', '3', '<b>Samsung Galaxy A70</b> completa la serie Galaxy A del 2019. Con una pantalla Full HD+ de<b> 6.7 pulgadas</b>, el Galaxy A70 está potenciado por un procesador octa-core a 2GHz con 6GB o 8GB de memoria RAM y 128GB de almacenamiento interno. La cámara principal del Galaxy A70 es triple, en configuración 24MP + 8MP + 5MP, y su cámara para selfies es de 32MP. Completando sus características, el Galaxy A70 tiene lector de huellas embebido en pantalla, batería de <b>4500 mAh</b> de carga rápida, puerto USB-C, y corre <b>Android 9.0 Pie.</b>')">
+                                <p class=manjari> Samsung Galaxy A70</p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup2C3">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert2C3')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert2C3" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel2C3"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert2C3')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto2C3', 'alert2C3')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like2C3" src="images/like.png" onclick="Like('like2C3')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir2C3')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir2C3">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir2C3')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Samsung Galaxy A70 en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto3C3"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil-->
+                        <img class = "moviles" src="images/a60.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup3C3', '3', '<b>Samsung Galaxy A60</b> es un smartphone Android con pantalla Infinity-O de <b>6.3 pulgadas</b> a resolución Full HD+. Por dentro, el Galaxy A60 cuenta con un procesador Snapdragon 675 de ocho núcleos, acompañado de 6GB de memoria RAM y 128GB de almacenamiento interno expandible. La cámara trasera del Galaxy A60 es triple, con un lente principal de 32 MP, un telefoto de 5 MP y un gran angular de 8 MP, mientras que su cámara para selfies es de 16 MP. Completando sus características, encontramos una batería de <b>3500 mAh</b> de carga rápida, sonido Dolby Atmos, lector de huellas en su posterior, y puerto USB-C. El Galaxy A60 corre <b>Android 9.0 Pie</b> con la interfaz de usuario One UI.')">
+                                <p class=manjari> Samsung Galaxy A60</p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup3C3">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert3C3')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div>  
+                        <div id = "alert3C3" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel3C3"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert3C3')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto3C3', 'alert3C3')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like3C3" src="images/like.png" onclick="Like('like3C3')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir3C3')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir3C3">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir3C3')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Samsung Galaxy A60 en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div> 
+                    </div>
+                    </li>
+                    <li class="ui-state-default">
+                    <div class = "producto" id = "producto4C3"> 
+                        <!--En la esquina derecha se encuentra la imagen del móvil--> 
+                        <img class = "moviles" src="images/a50.png"/>
+                        <div class = "popup">
+                            <div class = "tipo-movil" onclick="createPopUp('myPopup4C3', '3', '<b>Samsung Galaxy A50</b> tiene una pantalla Infinity-U Super AMOLED de<b> 6.4 pulgadas</b> a resolución Full HD+ y está potenciado por un procesador Exynos 9610 de ocho núcleos con 4GB de memoria RAM y 64GB de almacenamiento o bien 6GB de RAM y 128GB de almacenamiento. La cámara del Galaxy A50 es triple, de 25 MP + 5 MP + 8 MP, y su cámara para selfies es de 25 MP. El Galaxy A50 completa sus características con una batería de <b>4000 mAh</b> con carga rápida, lector de huella embebido en pantalla, puerto USB-C y <b>Android 9.0 Pie.</b>')">
+                                <p class=manjari> Samsung Galaxy A50</p>
+                            </div>
+                            <span class = "popuptext" id = "myPopup4C3">
+                            </span>
+                        </div>
+                        <!--Al lado se definirá el tipo de móvil que se encuentra en la foto-->
+                        <!--Asimismo, se descubre un icono de exit, el cual al pasar el cursor sufrirá un overlay
+                        apareciendo una nueva imagen destacada en rojo, al dar click irá a la función y saltará una alerta donde pregunta si quieres borrar la caja-->
+                        <div class = "img-exit" onclick="Modelbox('alert4C3')"> 
+                            <img src="images/exit.png"/>
+                            <div class="overlay">
+                                <img class= "icon" src="images/exit2.png">
+                            </div>
+                        </div> 
+                        <div id = "alert4C3" class="w3-modal">
+                            <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+                                <div id ="textmodel4C3"class="w3-container">
+                                    <p class = "manjari">¿Desea borrar la caja?</p>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelCancelar('alert4C3')">Cancelar</button>
+                                    <button class="w3-button w3-right w3-white w3-border" onclick="ModelAceptar('producto4C3', 'alert4C3')">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--En la parte inferior del divisor producto se encuentran las reacciones y la hora-->
+                        <!--Las acciones cuando pasa el cursor sobre ellas aparece un tooltip para ayudar al
+                        usuario en la descripción de estas-->
+                        <!--También, las acciones incrementarán en tamaño al pasar el cursor sobre ellas-->
+                        <div class = "acciones">
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" id="like4C3" src="images/like.png" onclick="Like('like4C3')"/>
+                                    <span class= "tooltiptext"> Me gusta</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip">
+                                    <img class = "accion" src="images/comment.png"/>
+                                    <span class= "tooltiptext"> Comentar</span>
+                                </div>
+                            </div>
+                            <div class = "accion-tool">
+                                <div class = "tooltip"> 
+                                    <img class = "accion" src="images/share.png" onclick="myFunctionOpen('compartir4C3')"/>
+                                    <span class= "tooltiptext"> Compartir</span>
+                                </div>
+                            </div>
+                            <div class = "fecha"><p class=manjari> 18/09/2019 19:48 </p></div>
+                            <div class = "Popcompartir">
+                                <span class = "PopupCompartir" id = "compartir4C3">
+                                    <div class = "exitComp" onclick="myFunctionClose('compartir4C3')"> 
+                                        <img src="images/exit.png"/>
+                                        <div class="overlay">
+                                            <img class= "icon" src="images/exit2.png">
+                                        </div>
+                                    </div>
+                                    <p>Compartir evento Samsung Galaxy A50 en:</p>
+                                        
+                                    <img  class= "img-compop" src="images/twitter.png"/>
+                                    <img  class= "img-compop" src="images/insta.png"/>
+                                    <img  class= "img-compop" src="images/facebook.png"/>
+                                 </span>
+                            </div>
+                        </div>
+                    </div> 
+                    </li>
+                    </ul>
+                    <div class = "img-addproduct" onclick= "myFunctionOpen('AdicionesProducto3')"> 
+                        <img src= "images/plus.png"/>
+                        <div class="overlay">
+                            <img src="images/plus2.png"/>
+                        </div>
+                    </div> 
+                    <div class = "PopAdicionarProducto">
+                        <span class = "PopupAdicionarProducto" id = "AdicionesProducto3">
+                            <div class= "nuevoTipoMovil">
+                                <p>
+                                    Introduce el nombre de un nuevo producto:
+                                    <input id="adicionMovil3" type="text" name="datos" maxlength= "20" required>
+                                </p>
+                                <br>
+                                <br>
+                                <p>
+                                    Seleccione una nueva foto:    
+                                    <label  for= "picture" class="labelMovil"></label>
+                                    <input  id="adicionImagen3" type="file" name="nuevaImagenMovil"/>
+                                </p>
+                                <br>
+                                <br>
+                                <p>
+                                    Introduce un texto de descripción del nuevo evento:
+                                    <input  id="adicionMovilTexto3" required type="text" />
+                                </p>
+                            </div>
+                            <div class= "opcionesAdicion">
+                                <button class = "botonesAdicion" onclick="myFunctionClose('AdicionesProducto3')"> 
+                                    Cancelar
+                                </button>
+                                <button class = "botonesAdicion" onclick="CloseAddProduct('3','AdicionesProducto3', 'adicionMovil3', 'adicionImagen3', 'adicionMovilTexto3')"> 
+                                    Aceptar
+                                </button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            </ul>
+            </main>
+            <!--En el footer se ecuentra el copyright, y el vínculo de las distintas redes sociales-->
+            <!--Los iconos estarán centrados-->
+            <footer>
+                <div class = "opciones-footer"> 
+                    <div class ="img-footer">
+                        <img src="images/nomecopies.png"/>
+                    </div>
+                    <p>|</p>
+                    <div class ="img-footer">
+                         <a href="https://www.twitter.com"><img src="images/twitter.png"/></a>
+                    </div>
+                    <p>|</p>
+                    <div class ="img-footer">
+                        <a href="https://www.instagram.com"><img src="images/insta.png"/></a>
+                    </div>
+                    <p>|</p>
+                    <div class ="img-footer">
+                        <a href="https://es.facebook.com"><img src="images/facebook.png"/></a>
+                    </div>
+                </div>
+            </footer>
+        </body>
+    </html>
